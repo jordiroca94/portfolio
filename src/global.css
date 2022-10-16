@@ -16,3 +16,36 @@
 html {
     scroll-behavior: smooth;
   }
+
+  /* BUTTON ANIMATIONS */
+
+.underlineHover {
+  display: inline-block;
+  position: relative;
+}
+
+.underlineHover:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.50s ease-out;
+  transform: scaleX(1);
+}
+
+.underlineHover:hover:after {
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  background-color:white;
+
+}
+
+nav a.active{
+  border-bottom: 0.1rem solid white;
+  padding-bottom:0.3rem;
+}
