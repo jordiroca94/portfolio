@@ -2,3 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* BUTTON ANIMATIONS */
+
+.underlineAfterHover {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .underlineAfterHover:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+    transform: scaleX(1);
+  }
+  
+  .underlineAfterHover:hover:after {
+    background-color: currentcolor;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+  }
