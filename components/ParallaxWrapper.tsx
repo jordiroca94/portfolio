@@ -87,7 +87,11 @@ const ParallaxWrapper = () => {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <img src={url('server')} style={{ width: '20%' }} />
+            <div className="flex flex-col gap-2 text-center">
+              <h1 className="text-white text-5xl">Hello! I'm Jordi Roca</h1>
+              <h2 className="text-white text-4xl">Front-end Developer</h2>
+            </div>
+          {/* <img src={url('server')} style={{ width: '20%' }} /> */}
         </ParallaxLayer>
 
         <ParallaxLayer
