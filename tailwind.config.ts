@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -11,6 +12,7 @@ const config: Config = {
       colors: {
         white: '#FFFFFF',
         black: '#000000',
+        lightBlack:'#253237',
         gray: '#BEBCB4',
       },
     },

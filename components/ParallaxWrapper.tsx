@@ -1,8 +1,7 @@
 "use client"
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { useRef } from "react";
-import image from "../public/mountain.jpeg"
-import Image from "next/image";
+
 
 const url = (name: string, wrap = false) =>
   `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -12,8 +11,8 @@ const ParallaxWrapper = () => {
   const parallax = useRef<IParallax>(null!)
 
   return (
-    <div style={{ width: '100%', height: '100%', background: '#253237' }}>
-      <Parallax ref={parallax} pages={3}>
+    <div className="bg-lightBlack" style={{ width: '100%', height: '100%'}}>
+      <Parallax style={{backgroundColor:'#253237'}} ref={parallax} pages={3}>
         <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
         <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
 
@@ -29,7 +28,6 @@ const ParallaxWrapper = () => {
 
         <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
           <img src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />
-
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
