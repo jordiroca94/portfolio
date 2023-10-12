@@ -11,8 +11,12 @@ const ParallaxWrapper = () => {
 
   return (
     <div>
-        <div className="h-screen">
-          <div className="object-cover h-full bg-red-300">
+        <div className="h-screen relative flex justify-center items-center">
+          <div className="z-20 text-white font-semibold">
+            <h1 className="text-5xl">I'm Jordi Roca</h1>
+            <h2 className="text-4xl">Front-end developer</h2>
+          </div>
+          <div className="object-cover absolute h-full">
             <Image
               src={Image1}
               alt="Image"
@@ -21,7 +25,7 @@ const ParallaxWrapper = () => {
       </div>
       <Parallax ref={parallax} pages={3}>
         <ParallaxLayer offset={0}>
-          <div className="h-full bg-black">
+          <div className="h-screen bg-black">
             <h2 className="text-black">PARALLAX LAYER 1 </h2>
           </div>
         </ParallaxLayer>
