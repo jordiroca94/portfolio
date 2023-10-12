@@ -1,121 +1,40 @@
 "use client"
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { useRef } from "react";
+import Image1 from "../public/testImage.jpg"
+import Image from "next/image";
 
-
-const url = (name: string, wrap = false) =>
-  `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
 
 
 const ParallaxWrapper = () => {
   const parallax = useRef<IParallax>(null!)
 
   return (
-    <div className="bg-lightBlack" style={{ width: '100%', height: '100%'}}>
-      <Parallax style={{backgroundColor:'#253237'}} ref={parallax} pages={3}>
-        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
-        <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
-
-        <ParallaxLayer
-          offset={0}
-          speed={0}
-          factor={3}
-          style={{
-            backgroundImage: url('stars', true),
-            backgroundSize: 'cover',
-          }}
-        />
-
-        <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
-          <img src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '70%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '40%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '10%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2.5}
-          speed={-0.4}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            pointerEvents: 'none',
-          }}>
-          <img src={url('earth')} style={{ width: '60%' }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2}
-          speed={-0.3}
-          style={{
-            backgroundSize: '80%',
-            backgroundPosition: 'center',
-            backgroundImage: url('clients', true),
-          }}
-        />
-
-        <ParallaxLayer
-          offset={0}
-          speed={0.1}
-          onClick={() => parallax.current.scrollTo(1)}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            <div className="flex flex-col gap-2 text-center">
-              <h1 className="text-white text-5xl">Hello! I'm Jordi Roca</h1>
-              <h2 className="text-white text-4xl">Front-end Developer</h2>
+    <div>
+        <div className="h-screen">
+          <div className="object-cover h-full bg-red-300">
+            <Image
+              src={Image1}
+              alt="Image"
+              />
             </div>
-          {/* <img src={url('server')} style={{ width: '20%' }} /> */}
+      </div>
+      <Parallax ref={parallax} pages={3}>
+        <ParallaxLayer offset={0}>
+          <div className="h-full bg-black">
+            <h2 className="text-black">PARALLAX LAYER 1 </h2>
+          </div>
         </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={1}
-          speed={0.1}
-          onClick={() => parallax.current.scrollTo(2)}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <img src={url('bash')} style={{ width: '40%' }} />
+        <ParallaxLayer 
+          offset={1} 
+          speed={2}
+          >
+          <div>
+            <h2 className="text-black">PARALLAX LAYER 2 </h2>
+          </div>
         </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2}
-          speed={-0}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-          onClick={() => parallax.current.scrollTo(0)}>
-          <img src={url('clients-main')} style={{ width: '40%' }} />
+        <ParallaxLayer offset={2}>
+        <h2 className="text-black">PARALLAX LAYER 3 </h2>
         </ParallaxLayer>
       </Parallax>
     </div>
