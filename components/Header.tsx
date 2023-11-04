@@ -57,10 +57,10 @@ const Header = () => {
         <a className="font-extrabold text-2xl" href="/">
           JORDI ROCA
         </a>
-        <div className="flex gap-4">
+        <div className="flex gap-6">
           {navLinks.map((item) => (
-            <div className="underlineAfterHover" key={item.label}>
-              <h5>{item.label}</h5>
+            <div key={item.label}>
+              <h5 className="underlineAfterHover text-lg">{item.label}</h5>
             </div>
           ))}
         </div>

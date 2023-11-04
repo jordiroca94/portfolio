@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import Header from "@/components/Header";
 import Introduction from "@/components/Introduction";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <Header />
       <Introduction />
+      <About />
     </main>
   );
 }
