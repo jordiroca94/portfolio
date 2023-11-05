@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+img {
+  pointer-events: none;
+}
+
+*:focus {
+  outline: 0 none !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+:root{
+  --transition: all 400ms ease;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 /* BUTTON ANIMATIONS */
 
 .underlineAfterHover {
@@ -27,3 +45,6 @@
     transform: scaleX(0);
     transform-origin: bottom left;
   }
+
+
+  

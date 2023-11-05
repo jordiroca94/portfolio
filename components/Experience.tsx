@@ -27,8 +27,8 @@ const Experience = () => {
     },
   ];
   return (
-    <Container className="bg-matteBlack text-white">
-      <h2 className="flex justify-center font-bold text-4xl">Experience</h2>
+    <Container id="Experience" className="bg-matteBlack text-white h-screen">
+      <h2 className="flex justify-center font-bold text-5xl">Experience</h2>
       <div className="flex justify-center gap-20 pt-20">
         {jobExperiences.map((item) => (
           <div

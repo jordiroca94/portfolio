@@ -4,18 +4,25 @@ import Button from "./Button";
 
 const About = () => {
   return (
-    <Container>
+    <Container id="About" className="h-screen">
       <div className="flex flex-col items-center justify-center">
-        <h2 className="font-bold text-4xl">About Me</h2>
-        <div className="flex w-2/3 pt-20">
+        <h2 className="font-bold text-5xl text-primary">About Me</h2>
+        <div className="flex w-2/3 pt-16">
           <div className="flex-1 flex flex-col items-center ">
-            <h3 className="text-2xl font-semibold">Experience</h3>
-            <h4 className="text-lg text-gray">+2 Years Experience</h4>
+            <a
+              href=""
+              className="text-center flex flex-col p-8 hover:bg-primary hover:text-white  rounded-lg transition-all duration-500 ease-in"
+            >
+              <h3 className="text-2xl font-semibold">Experience</h3>
+              <h4 className="text-lg">+2 Years Experience</h4>
+            </a>
           </div>
-          <div className="flex-1 flex flex-col items-center">
-            <h3 className="text-2xl font-semibold">Projects</h3>
-            <h4 className="text-lg text-gray">Over 8 Clients</h4>
-          </div>
+          <a className="flex-1 flex flex-col items-center">
+            <div className="text-center flex flex-col p-8 hover:bg-primary hover:text-white  rounded-lg transition-all duration-500 ease-in">
+              <h3 className="text-2xl font-semibold">Projects</h3>
+              <h4 className="text-lg ">Over 8 Clients</h4>
+            </div>
+          </a>
         </div>
         <div className="flex flex-col items-center text-center  w-3/5 pt-14 pb-7 text-lg text-gray">
           <p>I'm a front end developer with over 2 years of experience.</p>

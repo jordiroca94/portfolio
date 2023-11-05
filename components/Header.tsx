@@ -54,15 +54,15 @@ const Header = () => {
           : "-translate-y-32 transition delay-150 duration-500 ease-in-out"
       }`}
     >
-      <div className="px-10 flex justify-between text-black">
+      <div className="px-10 flex justify-between text-black text-primary">
         <a className="font-extrabold text-2xl" href="/">
           JORDI ROCA
         </a>
         <div className="flex gap-6">
           {navLinks.map((item) => (
-            <div key={item.key}>
+            <a href={"#" + item.label} key={item.key}>
               <h5 className="underlineAfterHover text-lg">{item.label}</h5>
-            </div>
+            </a>
           ))}
         </div>
       </div>
