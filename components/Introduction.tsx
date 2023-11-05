@@ -6,7 +6,7 @@ import Container from "./Container";
 
 const Introduction = () => {
   return (
-    <Container className="h-screen bg-matteBlack text-white ">
+    <Container className="h-screen bg-matteBlack text-white">
       <div className="flex flex-col justify-center items-center pt-20">
         <div className="flex flex-col text-center gap-2">
           <h3 className="text-2xl">Hello I'm </h3>

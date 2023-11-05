@@ -8,7 +8,7 @@ type Props = {
 const Container = ({ children, className }: Props) => {
   return (
     <div
-      className={`mx-auto w-full py-10 lg:py-20 px-6 lg:px-16 2xl:px-[6vw] ${className}`}
+      className={`mx-auto w-full py-10 lg:py-20 px-6 lg:px-16 2xl:px-[10vw] ${className}`}
     >
       {children}
     </div>

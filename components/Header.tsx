@@ -29,18 +29,19 @@ const Header = () => {
 
   const navLinks = [
     {
+      key: "1",
       label: "About",
     },
     {
-      label: "Skills",
-    },
-    {
+      key: "2",
       label: "Experience",
     },
     {
+      key: "3",
       label: "Projects",
     },
     {
+      key: "4",
       label: "Contact",
     },
   ];
@@ -59,7 +60,7 @@ const Header = () => {
         </a>
         <div className="flex gap-6">
           {navLinks.map((item) => (
-            <div key={item.label}>
+            <div key={item.key}>
               <h5 className="underlineAfterHover text-lg">{item.label}</h5>
             </div>
           ))}
