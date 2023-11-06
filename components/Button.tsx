@@ -12,7 +12,7 @@ const Button = ({ label, link, className, download, whiteBg }: Props) => {
     <div
       className={`py-2 px-4 rounded-lg text-lg border cursor-pointer transition-all duration-400 ease-in ${
         whiteBg
-          ? "border-black hover:bg-primary hover:text-white"
+          ? "border-black hover:bg-primary hover:text-white hover:border-none"
           : "border-white hover:bg-white hover:text-primary"
       } ${className && className}`}
     >

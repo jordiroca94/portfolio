@@ -7,8 +7,8 @@ const About = () => {
     <Container id="About" className="h-screen">
       <div className="flex flex-col items-center justify-center">
         <h2 className="font-bold text-5xl text-primary">About Me</h2>
-        <div className="flex w-2/3 pt-16">
-          <div className="flex-1 flex flex-col items-center ">
+        <div className="flex w-2/3 pt-4">
+          <div className="flex-1 flex flex-col items-center">
             <a
               href=""
               className="text-center flex flex-col p-8 hover:bg-primary hover:text-white  rounded-lg transition-all duration-500 ease-in"
@@ -24,7 +24,7 @@ const About = () => {
             </div>
           </a>
         </div>
-        <div className="flex flex-col items-center text-center  w-3/5 pt-14 pb-7 text-lg text-gray">
+        <div className="flex flex-col items-center text-center  w-3/5 py-4 text-lg text-gray">
           <p>I'm a front end developer with over 2 years of experience.</p>
           <br />
           <p>
