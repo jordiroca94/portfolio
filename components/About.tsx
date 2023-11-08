@@ -43,7 +43,11 @@ const About = () => {
           <br />
           <p>
             Besides my tech skills, I am a bouldering fanatic and I like to dive
-            from time to time.
+            from time to time. I'm very concerned about
+            <a className="text-primary font-semibold " href={"#humanRights"}>
+              {" "}
+              Humman Rights
+            </a>
           </p>
         </div>
         <div className="mt-8 flex gap-4">
