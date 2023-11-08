@@ -46,7 +46,7 @@ const About = () => {
             from time to time. I'm very concerned about
             <a className="text-primary font-semibold " href={"#humanRights"}>
               {" "}
-              Humman Rights
+              Human Rights
             </a>
           </p>
         </div>
