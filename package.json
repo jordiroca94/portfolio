@@ -10,14 +10,19 @@
   },
   "dependencies": {
     "@react-spring/parallax": "^9.7.3",
+    "css-loader": "^6.8.1",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "style-loader": "^3.3.3"
   },
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
-    "@types/react-dom": "latest",
+    "@types/react-dom": "^18.2.15",
+    "@types/react-slick": "^0.23.12",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",

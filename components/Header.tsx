@@ -60,7 +60,7 @@ const Header = () => {
         </a>
         <div className="flex gap-6">
           {navLinks.map((item) => (
-            <a href={"#" + item.label} key={item.key}>
+            <a href={"#" + item.label.toLowerCase()} key={item.key}>
               <h5 className="underlineAfterHover text-lg">{item.label}</h5>
             </a>
           ))}

@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const About = () => {
   return (
-    <Container id="About" className="h-screen">
+    <Container id="about">
       <div className="flex flex-col items-center justify-center">
         <h2 className="font-bold text-5xl text-primary">About Me</h2>
         <div className="flex w-2/3 pt-4">
@@ -24,8 +24,19 @@ const About = () => {
             </div>
           </a>
         </div>
-        <div className="flex flex-col items-center text-center  w-3/5 py-4 text-lg text-gray">
-          <p>I'm a front end developer with over 2 years of experience.</p>
+        <div className="flex flex-col font-light items-center text-center w-3/5 py-4 text-lg text-gray">
+          <p>
+            I'm a front end developer with over 2 years of experience. I'm
+            currently working in{" "}
+            <a
+              className="text-primary font-semibold hover:font-bold "
+              href={"#experience"}
+            >
+              {" "}
+              Dallonses
+            </a>{" "}
+            as a front end developer
+          </p>
           <br />
           <p>
             I have social and creative skills as well as a wide perspective to
@@ -44,7 +55,10 @@ const About = () => {
           <p>
             Besides my tech skills, I am a bouldering fanatic and I like to dive
             from time to time. I'm very concerned about
-            <a className="text-primary font-semibold " href={"#humanRights"}>
+            <a
+              className="text-primary font-semibold hover:font-bold "
+              href={"#humanRights"}
+            >
               {" "}
               Human Rights
             </a>

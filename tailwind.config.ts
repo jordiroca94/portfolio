@@ -14,6 +14,7 @@ const config: Config = {
         black: "#000000",
         matteBlack: "#28282B",
         gray: "#808080",
+        lightGray: "#E8E9E8",
       },
     },
   },

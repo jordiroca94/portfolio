@@ -3,6 +3,7 @@ import Container from "./Container";
 import Image from "next/image";
 import logoDallonses from "../public/assets/dallonsesLogo.jpeg";
 import logoClowid from "../public/assets/clowIdLogo.png";
+import Button from "./Button";
 
 const Experience = () => {
   const jobExperiences = [
@@ -12,9 +13,9 @@ const Experience = () => {
       date: "March to June 2022",
       description:
         "Front End development of ClowID web app (fintech swedish startup) using Agile methodology.",
-      stack:
-        "Front-end: HTML5 | SCSS | Tailwind | JavaScript (ES6) | TypeScript | Angular 12.",
+      stack: "Front-end: JavaScript (ES6) | TypeScript | Angular 12 & Tailwind",
       logo: logoClowid,
+      link: "https://www.clowid.com",
     },
     {
       key: "2",
@@ -22,12 +23,13 @@ const Experience = () => {
       date: "August 2022 - Currently",
       description: "Front End development of Dallonses",
       stack:
-        "Front-end: HTML5 | SCSS | Tailwind | JavaScript (ES6) | TypeScript | Angular 12.",
+        "Front-end: Javascript(ES6) | TypeScript | React.js  | Next.js & Tailwind",
       logo: logoDallonses,
+      link: "https://www.dallonses.com",
     },
   ];
   return (
-    <Container id="Experience" className="bg-matteBlack text-white h-screen">
+    <Container id="experience" className="bg-matteBlack text-white">
       <h2 className="flex justify-center font-bold text-5xl">Experience</h2>
       <div className="flex justify-center gap-20 pt-20">
         {jobExperiences.map((item) => (
@@ -40,10 +42,17 @@ const Experience = () => {
               src={item.logo}
               alt="Jordi-Roca"
             />
-            <h3 className="text-4xl text-bold pt-3">{item.company}</h3>
-            <p>{item.date}</p>
-            <h4>{item.description}</h4>
-            <h5>{item.stack}</h5>
+            <div className="flex flex-col justify-between h-full">
+              <div>
+                <h3 className="text-3xl font-semibold py-2">{item.company}</h3>
+                <p className="text-lg font-light mb-2">{item.date}</p>
+                <h4 className="mb-2">{item.description}</h4>
+                <h5>{item.stack}</h5>
+              </div>
+              <div className="w-fit py-4">
+                <Button openNewTab link={item.link} label="Discover" />
+              </div>
+            </div>
           </div>
         ))}
       </div>

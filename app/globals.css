@@ -46,5 +46,38 @@ html{
     transform-origin: bottom left;
   }
 
+  /* SLIDER */
+.sliderGaps .slick-slide  > div {
+  margin: 0 10px;
+}
+.sliderGaps .slick-list  {
+margin: 0 -10px;
+}
 
-  
+.sliderDots .slick-dots {
+margin:0 0 60px 0 ;
+}
+
+.slick-prev:before {
+  color:gray !important;
+  z-index: 20;
+  margin-left:-20px;
+}
+
+.slick-next:before {
+ color:gray !important;
+ z-index: 20;
+ margin-left:10px;
+}
+
+@media (max-width: 1024px) { 
+  .slick-prev {
+    display: none !important;
+  }
+ }
+
+ @media (max-width: 1024px) { 
+  .slick-next {
+    display: none !important;
+  }
+ }

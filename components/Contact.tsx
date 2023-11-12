@@ -3,8 +3,8 @@ import Container from "./Container";
 
 const Contact = () => {
   return (
-    <Container id="Contact" className="bg-white h-screen">
-      Slider
+    <Container id="contact" className="bg-white h-screen">
+      Contact
     </Container>
   );
 };
