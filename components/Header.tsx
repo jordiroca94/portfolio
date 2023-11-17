@@ -1,9 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import BurgerButton from "./BurguerButton";
+import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 
 const Header = () => {
   const [scrollPos, setScrollPos] = useState<number>(0);
   const [show, setShow] = useState<boolean>(true);
+  const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+  useLockBodyScroll(mobileMenu);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,18 +58,38 @@ const Header = () => {
           : "-translate-y-32 transition delay-150 duration-500 ease-in-out"
       }`}
     >
-      <div className="px-10 flex justify-between text-black text-primary">
+      <div className="px-0 lg:px-10 flex justify-between text-black text-primary">
         <a className="font-extrabold text-2xl" href="/">
           JORDI ROCA
         </a>
-        <div className="flex gap-6">
+        <div className="lg:flex gap-6 hidden">
           {navLinks.map((item) => (
             <a href={"#" + item.label.toLowerCase()} key={item.key}>
               <h5 className="underlineAfterHover text-lg">{item.label}</h5>
             </a>
           ))}
         </div>
+        <BurgerButton
+          onClick={() => setMobileMenu(!mobileMenu)}
+          isOpen={mobileMenu}
+          className="lg:hidden"
+        />
       </div>
+      {mobileMenu && (
+        <div className="z-40 flex w-full flex-col overflow-hidden bg-white p-6">
+          <div className="flex flex-col gap-6">
+            {navLinks.map((item) => (
+              <a
+                onClick={() => setMobileMenu(false)}
+                href={"#" + item.label.toLowerCase()}
+                key={item.key}
+              >
+                <h5 className="underlineAfterHover text-lg">{item.label}</h5>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
