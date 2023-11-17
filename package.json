@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@react-spring/parallax": "^9.7.3",
     "css-loader": "^6.8.1",
     "next": "latest",

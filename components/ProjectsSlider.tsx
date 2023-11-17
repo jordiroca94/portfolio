@@ -110,7 +110,7 @@ const ProjectsSlider = () => {
                   whiteBg
                   openNewTab
                   link={item.link}
-                  label="Live Demo"
+                  label="Check website"
                 />
               </div>
             </div>
