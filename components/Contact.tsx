@@ -30,16 +30,25 @@ const Contact = () => {
   };
 
   return (
-    <Container id="contact" className="h-screen flex flex-col items-center">
+    <Container id="contact" className="flex flex-col items-center">
       <h2 className="font-bold text-5xl text-primary mb-20">Contact Me</h2>
-
       <form
-        className="flex flex-col items-start w-2/5"
+        className="flex flex-col items-start w-2/5 text-lg"
         ref={form}
         onSubmit={sendEmail}
       >
+        <div className="w-full mb-10">
+          <p className="">
+            {
+              "Do you have any question? Feel free to fill in this form or contact me in "
+            }
+            <u className="text-primary font-semibold no-underline">
+              jordirocasoler94@gmail.com
+            </u>
+          </p>
+        </div>
         <div className="flex flex-col w-1/2 ">
-          <label className="text-base font-semibold mb-2">Name</label>
+          <label className="font-semibold mb-2">Name</label>
           <input
             className="rounded border border-gray/50 py-2 pl-2"
             type="text"
@@ -47,7 +56,7 @@ const Contact = () => {
           />
         </div>
         <div className="flex flex-col w-1/2">
-          <label className="text-base font-semibold mt-6 mb-2">Email</label>
+          <label className="font-semibold mt-6 mb-2">Email</label>
           <input
             className="rounded border border-gray/50 py-2 pl-2"
             type="email"
@@ -55,7 +64,7 @@ const Contact = () => {
           />
         </div>
         <div className="flex flex-col w-full">
-          <label className="text-base font-semibold mt-6 mb-2">Message</label>
+          <label className="font-semibold mt-6 mb-2">Message</label>
           <textarea
             className="rounded border border-gray/50 py-2 pl-2"
             name="message"
@@ -69,7 +78,7 @@ const Contact = () => {
           Send
         </button>
         {status === true && (
-          <p className="mt-4 text-base text-primary">
+          <p className="mt-4 text-primary">
             Your message was sent successfully
           </p>
         )}

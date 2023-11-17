@@ -66,7 +66,7 @@ const About = () => {
         </div>
         <div className="mt-8 flex gap-4">
           <Button whiteBg download link="" label="Download CV" />
-          <Button whiteBg link="" label="Let's talk" />
+          <Button whiteBg link="#contact" label="Let's talk" />
         </div>
       </div>
     </Container>
