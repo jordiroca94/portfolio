@@ -65,7 +65,12 @@ const About = () => {
           </p>
         </div>
         <div className="mt-8 flex gap-4">
-          <Button whiteBg download link="" label="Download CV" />
+          <Button
+            whiteBg
+            openNewTab
+            link="https://drive.google.com/file/d/1skL-RuwG7sPbYrbzf1bmoCHtBTW7E896/view?usp=sharing"
+            label="Download CV"
+          />
           <Button whiteBg link="#contact" label="Let's talk" />
         </div>
       </div>

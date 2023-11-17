@@ -12,10 +12,10 @@ const Footer = () => {
             href="https://www.linkedin.com/in/jordi-roca-soler/"
             target="_blank"
           >
-            <BsLinkedin className="h-8 w-8" />
+            <BsLinkedin className="h-8 w-8 hover:animate-bounce" />
           </a>
           <a href="https://github.com/jordiroca94" target="_blank">
-            <FaGithub className="h-8 w-8" />
+            <FaGithub className="h-8 w-8 hover:animate-bounce" />
           </a>
         </div>
         <div>

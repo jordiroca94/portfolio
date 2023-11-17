@@ -53,6 +53,7 @@ const Contact = () => {
             className="rounded border border-gray/50 py-2 pl-2"
             type="text"
             name="user_name"
+            placeholder="Your full name"
           />
         </div>
         <div className="flex flex-col w-1/2">
@@ -61,6 +62,7 @@ const Contact = () => {
             className="rounded border border-gray/50 py-2 pl-2"
             type="email"
             name="user_email"
+            placeholder="Your email"
           />
         </div>
         <div className="flex flex-col w-full">
@@ -68,6 +70,7 @@ const Contact = () => {
           <textarea
             className="rounded border border-gray/50 py-2 pl-2"
             name="message"
+            placeholder="Message..."
           />
         </div>
         <button
