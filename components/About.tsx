@@ -10,14 +10,14 @@ const About = () => {
         <div className="flex w-2/3 pt-4">
           <div className="flex-1 flex flex-col items-center">
             <a
-              href=""
+              href="#experience"
               className="text-center flex flex-col p-8 hover:bg-primary hover:text-white  rounded-lg transition-all duration-500 ease-in"
             >
               <h3 className="text-2xl font-semibold">Experience</h3>
               <h4 className="text-lg">+2 Years Experience</h4>
             </a>
           </div>
-          <a className="flex-1 flex flex-col items-center">
+          <a href="#projects" className="flex-1 flex flex-col items-center">
             <div className="text-center flex flex-col p-8 hover:bg-primary hover:text-white  rounded-lg transition-all duration-500 ease-in">
               <h3 className="text-2xl font-semibold">Projects</h3>
               <h4 className="text-lg ">Over 8 Clients</h4>
@@ -26,7 +26,7 @@ const About = () => {
         </div>
         <div className="flex flex-col font-light items-center text-center w-3/5 py-4 text-lg text-gray">
           <p>
-            I'm a front end developer with over 2 years of experience. I'm
+            I am a front end developer with over 2 years of experience. I am
             currently working in{" "}
             <a
               className="text-primary font-semibold hover:font-bold "
@@ -49,12 +49,12 @@ const About = () => {
           <p>
             As a front end developer I have strong skills in Typescript and some
             Javascript frameworks such as React.js and Angular. I also have
-            skills building small API'S using Node.js & Mongo DB.
+            skills building small APIS using Node.js & Mongo DB.
           </p>
           <br />
           <p>
             Besides my tech skills, I am a bouldering fanatic and I like to dive
-            from time to time. I'm very concerned about
+            from time to time. I am very concerned about
             <a
               className="text-primary font-semibold hover:font-bold "
               href={"#humanRights"}
@@ -71,7 +71,7 @@ const About = () => {
             link="https://drive.google.com/file/d/1skL-RuwG7sPbYrbzf1bmoCHtBTW7E896/view?usp=sharing"
             label="Download CV"
           />
-          <Button whiteBg link="#contact" label="Let's talk" />
+          <Button whiteBg link="#contact" label="Let s talk" />
         </div>
       </div>
     </Container>
