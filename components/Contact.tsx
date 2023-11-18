@@ -2,6 +2,8 @@
 import React, { useRef, useState } from "react";
 import Container from "./Container";
 import emailjs from "@emailjs/browser";
+import TextAnimation from "./animations/TextAnimation";
+import SimpleAnimation from "./animations/SimpleAnimation";
 
 const Contact = () => {
   const form: any = useRef();
@@ -31,13 +33,15 @@ const Contact = () => {
 
   return (
     <Container id="contact" className="flex flex-col items-center">
-      <h2 className="font-bold text-5xl text-primary mb-20">Contact Me</h2>
+      <TextAnimation className="flex justify-center">
+        <h2 className="font-bold text-5xl text-primary mb-20">Contact Me</h2>
+      </TextAnimation>
       <form
         className="flex flex-col items-start lg:w-2/5 text-lg"
         ref={form}
         onSubmit={sendEmail}
       >
-        <div className="w-full mb-10">
+        <SimpleAnimation className="w-full mb-10">
           <p>
             {
               "Do you have any question? Feel free to fill in this form or contact me in "
@@ -46,7 +50,7 @@ const Contact = () => {
               jordirocasoler94@gmail.com
             </u>
           </p>
-        </div>
+        </SimpleAnimation>
         <div className="flex flex-col w-1/2 ">
           <label className="font-semibold mb-2">Name</label>
           <input

@@ -2,12 +2,13 @@ import React from "react";
 import Container from "./Container";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
+import SimpleAnimation from "./animations/SimpleAnimation";
 
 const Footer = () => {
   return (
     <Container className="bg-matteBlack">
       <footer className="text-white flex items-center flex-col gap-4">
-        <div className="flex gap-8">
+        <SimpleAnimation className="flex gap-8">
           <a
             href="https://www.linkedin.com/in/jordi-roca-soler/"
             target="_blank"
@@ -17,10 +18,10 @@ const Footer = () => {
           <a href="https://github.com/jordiroca94" target="_blank">
             <FaGithub className="h-8 w-8 hover:animate-bounce" />
           </a>
-        </div>
-        <div>
+        </SimpleAnimation>
+        <SimpleAnimation>
           <small>Copyright &copy; 2023 Jordi Roca</small>
-        </div>
+        </SimpleAnimation>
       </footer>
     </Container>
   );

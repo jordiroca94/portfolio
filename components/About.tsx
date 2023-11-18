@@ -1,12 +1,16 @@
 import React from "react";
 import Container from "./Container";
 import Button from "./Button";
+import TextAnimation from "./animations/TextAnimation";
+import SimpleAnimation from "./animations/SimpleAnimation";
 
 const About = () => {
   return (
     <Container id="about">
       <div className="flex flex-col items-center justify-center">
-        <h2 className="font-bold text-5xl text-primary">About Me</h2>
+        <TextAnimation className="flex justify-center">
+          <h2 className="font-bold text-5xl text-primary">About Me</h2>
+        </TextAnimation>
         <div className="flex lg:w-2/3 pt-4">
           <div className="flex-1 flex flex-col items-center">
             <a
@@ -24,46 +28,49 @@ const About = () => {
             </div>
           </a>
         </div>
-        <div className="flex flex-col font-light items-center text-center lg:w-3/5 py-4 text-lg text-gray">
-          <p>
-            I am a front end developer with over 2 years of experience. I am
-            currently working in{" "}
-            <a
-              className="text-primary font-semibold hover:font-bold "
-              href={"#experience"}
-            >
-              {" "}
-              Dallonses
-            </a>{" "}
-            as a front end developer
-          </p>
-          <br />
-          <p>
-            I have social and creative skills as well as a wide perspective to
-            see the picture and be able to break down challenges in small
-            pieces. I value teamwork and the chance to innovate and be creative.
-            As I am a proactive person I really enjoy to be involved in multiple
-            parts on a project and sharing ideas.
-          </p>
-          <br />
-          <p>
-            As a front end developer I have strong skills in Typescript and some
-            Javascript frameworks such as React.js and Angular. I also have
-            skills building small APIS using Node.js & Mongo DB.
-          </p>
-          <br />
-          <p>
-            Besides my tech skills, I am a bouldering fanatic and I like to dive
-            from time to time. I am very concerned about
-            <a
-              className="text-primary font-semibold hover:font-bold "
-              href={"#humanRights"}
-            >
-              {" "}
-              Human Rights
-            </a>
-          </p>
-        </div>
+        <SimpleAnimation className="flex justify-center">
+          <div className="flex flex-col font-light items-center text-center lg:w-3/5 py-4 text-lg text-gray">
+            <p>
+              I am a front end developer with over 2 years of experience. I am
+              currently working in{" "}
+              <a
+                className="text-primary font-semibold hover:font-bold "
+                href={"#experience"}
+              >
+                {" "}
+                Dallonses
+              </a>{" "}
+              as a front end developer
+            </p>
+            <br />
+            <p>
+              I have social and creative skills as well as a wide perspective to
+              see the picture and be able to break down challenges in small
+              pieces. I value teamwork and the chance to innovate and be
+              creative. As I am a proactive person I really enjoy to be involved
+              in multiple parts on a project and sharing ideas.
+            </p>
+            <br />
+            <p>
+              As a front end developer I have strong skills in Typescript and
+              some Javascript frameworks such as React.js and Angular. I also
+              have skills building small APIS using Node.js & Mongo DB.
+            </p>
+            <br />
+            <p>
+              Besides my tech skills, I am a bouldering fanatic and I like to
+              dive from time to time. I am very concerned about
+              <a
+                className="text-primary font-semibold hover:font-bold "
+                href={"#humanRights"}
+              >
+                {" "}
+                Human Rights
+              </a>
+            </p>
+          </div>
+        </SimpleAnimation>
+
         <div className="mt-8 flex gap-4">
           <Button
             whiteBg

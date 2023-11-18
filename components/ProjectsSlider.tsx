@@ -13,6 +13,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Button from "./Button";
+import TextAnimation from "./animations/TextAnimation";
 
 const ProjectsSlider = () => {
   const settings = {
@@ -84,9 +85,11 @@ const ProjectsSlider = () => {
   ];
   return (
     <Container id="projects" className="bg-white lg:py-32 py-20">
-      <h2 className="font-bold text-5xl text-primary pb-10 flex justify-center">
-        Projects
-      </h2>
+      <TextAnimation>
+        <h2 className="font-bold text-5xl text-primary pb-10 flex justify-center">
+          Projects
+        </h2>
+      </TextAnimation>
       <Slider className="sliderGaps" {...settings}>
         {dataSlider.map((item, index) => (
           <div

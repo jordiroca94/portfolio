@@ -4,6 +4,8 @@ import Image from "next/image";
 import logoDallonses from "../public/assets/dallonsesLogo.jpeg";
 import logoClowid from "../public/assets/clowIdLogo.png";
 import Button from "./Button";
+import TextAnimation from "./animations/TextAnimation";
+import SimpleAnimation from "./animations/SimpleAnimation";
 
 const Experience = () => {
   const jobExperiences = [
@@ -30,10 +32,12 @@ const Experience = () => {
   ];
   return (
     <Container id="experience" className="bg-matteBlack text-white">
-      <h2 className="flex justify-center font-bold text-5xl">Experience</h2>
+      <TextAnimation>
+        <h2 className="flex justify-center font-bold text-5xl">Experience</h2>
+      </TextAnimation>
       <div className="flex flex-col lg:flex-row justify-center gap-20 pt-20">
         {jobExperiences.map((item) => (
-          <div
+          <SimpleAnimation
             className="flex flex-col border border-white p-6 gap-y-2 rounded-lg lg:w-1/3"
             key={item.key}
           >
@@ -53,7 +57,7 @@ const Experience = () => {
                 <Button openNewTab link={item.link} label="Website" />
               </div>
             </div>
-          </div>
+          </SimpleAnimation>
         ))}
       </div>
     </Container>

@@ -3,15 +3,19 @@ import Container from "./Container";
 import Armonia from "../public/assets/armonia.jpeg";
 import SIR from "../public/assets/stillIRise.png";
 import Image from "next/image";
+import SimpleAnimation from "./animations/SimpleAnimation";
+import TextAnimation from "./animations/TextAnimation";
 
 const HumanRights = () => {
   return (
     <Container id="humanRights" className="bg-matteBlack lg:h-screen">
       <div className="flex flex-col items-center justify-center">
-        <h2 className="font-bold text-5xl text-white">
-          Involved with Human Rights
-        </h2>
-        <div className="lg:w-3/4 text-white py-10 text-lg">
+        <TextAnimation className="flex justify-center">
+          <h2 className="font-bold text-5xl text-white">
+            Involved with Human Rights
+          </h2>
+        </TextAnimation>
+        <SimpleAnimation className="lg:w-3/4 text-white py-10 text-lg">
           <p className="mb-4 text-justify">
             On 2020 I was working for a year in Greece involved with the refugee
             crisis in Europe. Few weeks before covid pandemic started I moved to
@@ -65,7 +69,7 @@ const HumanRights = () => {
               </h5>
             </a>
           </div>
-        </div>
+        </SimpleAnimation>
       </div>
     </Container>
   );
