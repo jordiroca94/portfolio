@@ -31,10 +31,10 @@ const Experience = () => {
   return (
     <Container id="experience" className="bg-matteBlack text-white">
       <h2 className="flex justify-center font-bold text-5xl">Experience</h2>
-      <div className="flex justify-center gap-20 pt-20">
+      <div className="flex flex-col lg:flex-row justify-center gap-20 pt-20">
         {jobExperiences.map((item) => (
           <div
-            className="flex flex-col border border-white p-6 gap-y-2 rounded-lg w-1/3"
+            className="flex flex-col border border-white p-6 gap-y-2 rounded-lg lg:w-1/3"
             key={item.key}
           >
             <Image
@@ -50,7 +50,7 @@ const Experience = () => {
                 <h5>{item.stack}</h5>
               </div>
               <div className="w-fit py-4">
-                <Button openNewTab link={item.link} label="Discover" />
+                <Button openNewTab link={item.link} label="Website" />
               </div>
             </div>
           </div>

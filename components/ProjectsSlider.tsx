@@ -83,7 +83,7 @@ const ProjectsSlider = () => {
     },
   ];
   return (
-    <Container id="projects" className="bg-white h-screen">
+    <Container id="projects" className="bg-white lg:py-32 py-20">
       <h2 className="font-bold text-5xl text-primary pb-10 flex justify-center">
         Projects
       </h2>
@@ -110,7 +110,7 @@ const ProjectsSlider = () => {
                   whiteBg
                   openNewTab
                   link={item.link}
-                  label="Check website"
+                  label="Clients website"
                 />
               </div>
             </div>

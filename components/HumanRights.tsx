@@ -6,10 +6,10 @@ import Image from "next/image";
 
 const HumanRights = () => {
   return (
-    <Container id="humanRights" className="bg-matteBlack h-screen">
+    <Container id="humanRights" className="bg-matteBlack lg:h-screen">
       <div className="flex flex-col items-center justify-center">
         <h2 className="font-bold text-5xl text-white">
-          Highly involved with Human Rights
+          Involved with Human Rights
         </h2>
         <div className="lg:w-3/4 text-white py-10 text-lg">
           <p className="mb-4 text-justify">

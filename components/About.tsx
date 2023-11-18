@@ -7,7 +7,7 @@ const About = () => {
     <Container id="about">
       <div className="flex flex-col items-center justify-center">
         <h2 className="font-bold text-5xl text-primary">About Me</h2>
-        <div className="flex w-2/3 pt-4">
+        <div className="flex lg:w-2/3 pt-4">
           <div className="flex-1 flex flex-col items-center">
             <a
               href="#experience"
@@ -24,7 +24,7 @@ const About = () => {
             </div>
           </a>
         </div>
-        <div className="flex flex-col font-light items-center text-center w-3/5 py-4 text-lg text-gray">
+        <div className="flex flex-col font-light items-center text-center lg:w-3/5 py-4 text-lg text-gray">
           <p>
             I am a front end developer with over 2 years of experience. I am
             currently working in{" "}

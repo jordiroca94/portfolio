@@ -33,12 +33,12 @@ const Contact = () => {
     <Container id="contact" className="flex flex-col items-center">
       <h2 className="font-bold text-5xl text-primary mb-20">Contact Me</h2>
       <form
-        className="flex flex-col items-start w-2/5 text-lg"
+        className="flex flex-col items-start lg:w-2/5 text-lg"
         ref={form}
         onSubmit={sendEmail}
       >
         <div className="w-full mb-10">
-          <p className="">
+          <p>
             {
               "Do you have any question? Feel free to fill in this form or contact me in "
             }
@@ -70,7 +70,7 @@ const Contact = () => {
           <textarea
             className="rounded border border-gray/50 py-2 pl-2"
             name="message"
-            placeholder="Message..."
+            placeholder="Your message"
           />
         </div>
         <button
