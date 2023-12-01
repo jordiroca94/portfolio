@@ -1,6 +1,6 @@
 "use client";
 
-import { HTMLMotionProps, motion, Variants } from "framer-motion";
+import { HTMLMotionProps, motion, useInView, Variants } from "framer-motion";
 import { useRef, FC, ReactNode } from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
@@ -16,21 +16,17 @@ type Custom = Pick<Props, "delay">;
 const variants: Variants = {
   hide: () => ({
     opacity: 0,
-    scale: 0.95,
-    translateY: 70,
   }),
   show: ({ delay }: Custom) => ({
     opacity: 1,
-    scale: 1,
-    translateY: 0,
     transition: {
       delay,
-      duration: 0.5,
+      duration: 0.7,
     },
   }),
 };
 
-const SimpleAnimation: FC<Props> = ({ children, delay = 0.05, ...props }) => {
+const SimpleAnimation: FC<Props> = ({ children, delay = 0.1, ...props }) => {
   const ref = useRef<HTMLDivElement>(null);
   const intersecting = useIntersectionObserver(ref);
 

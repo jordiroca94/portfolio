@@ -13,20 +13,24 @@ const About = () => {
         </TextAnimation>
         <div className="flex lg:w-2/3 pt-4">
           <div className="flex-1 flex flex-col items-center">
-            <a
-              href="#experience"
-              className="text-center flex flex-col p-8 hover:bg-primary hover:text-white  rounded-lg transition-all duration-500 ease-in"
-            >
-              <h3 className="text-2xl font-semibold">Experience</h3>
-              <h4 className="text-lg">+2 Years Experience</h4>
-            </a>
+            <SimpleAnimation>
+              <a
+                href="#experience"
+                className="text-center flex flex-col p-8 hover:bg-primary hover:text-white  rounded-lg transition-all duration-500 ease-in"
+              >
+                <h3 className="text-2xl font-semibold">Experience</h3>
+                <h4 className="text-lg">+2 Years Experience</h4>
+              </a>
+            </SimpleAnimation>
           </div>
-          <a href="#projects" className="flex-1 flex flex-col items-center">
-            <div className="text-center flex flex-col p-8 hover:bg-primary hover:text-white  rounded-lg transition-all duration-500 ease-in">
-              <h3 className="text-2xl font-semibold">Projects</h3>
-              <h4 className="text-lg ">Over 8 Clients</h4>
-            </div>
-          </a>
+          <SimpleAnimation className="flex-1 flex flex-col items-center">
+            <a href="#projects">
+              <div className="text-center flex flex-col p-8 hover:bg-primary hover:text-white  rounded-lg transition-all duration-500 ease-in">
+                <h3 className="text-2xl font-semibold">Projects</h3>
+                <h4 className="text-lg ">Over 8 Clients</h4>
+              </div>
+            </a>
+          </SimpleAnimation>
         </div>
         <SimpleAnimation className="flex justify-center">
           <div className="flex flex-col font-light items-center text-center lg:w-3/5 py-4 text-lg text-gray">
@@ -70,8 +74,7 @@ const About = () => {
             </p>
           </div>
         </SimpleAnimation>
-
-        <div className="mt-8 flex gap-4">
+        <SimpleAnimation className="mt-8 flex gap-6">
           <Button
             whiteBg
             openNewTab
@@ -79,7 +82,7 @@ const About = () => {
             label="Download CV"
           />
           <Button whiteBg link="#contact" label="Let s talk" />
-        </div>
+        </SimpleAnimation>
       </div>
     </Container>
   );

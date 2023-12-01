@@ -41,7 +41,7 @@ const Contact = () => {
         ref={form}
         onSubmit={sendEmail}
       >
-        <SimpleAnimation className="w-full mb-10">
+        <TextAnimation className="w-full mb-10">
           <p>
             {
               "Do you have any question? Feel free to fill in this form or contact me in "
@@ -50,40 +50,43 @@ const Contact = () => {
               jordirocasoler94@gmail.com
             </u>
           </p>
+        </TextAnimation>
+        <SimpleAnimation className="w-full">
+          <div className="flex flex-col sm:w-1/2 ">
+            <label className="font-semibold mb-2">Name</label>
+            <input
+              className="rounded border border-gray/50 py-2 pl-2"
+              type="text"
+              name="user_name"
+              placeholder="Your full name"
+            />
+          </div>
+          <div className="flex flex-col sm:w-1/2">
+            <label className="font-semibold mt-6 mb-2">Email</label>
+            <input
+              className="rounded border border-gray/50 py-2 pl-2"
+              type="email"
+              name="user_email"
+              placeholder="Your email"
+            />
+          </div>
+          <div className="flex flex-col w-full">
+            <label className="font-semibold mt-6 mb-2">Message</label>
+            <textarea
+              className="rounded border border-gray/50 py-2 pl-2"
+              name="message"
+              placeholder="Your message"
+            />
+          </div>
+          <button
+            className="mt-10 border-black hover:bg-primary hover:text-white hover:border-none py-2 px-10 rounded-lg text-lg border cursor-pointer transition-all duration-400 ease-in"
+            type="submit"
+            value="Send"
+          >
+            Send
+          </button>
         </SimpleAnimation>
-        <div className="flex flex-col w-1/2 ">
-          <label className="font-semibold mb-2">Name</label>
-          <input
-            className="rounded border border-gray/50 py-2 pl-2"
-            type="text"
-            name="user_name"
-            placeholder="Your full name"
-          />
-        </div>
-        <div className="flex flex-col w-1/2">
-          <label className="font-semibold mt-6 mb-2">Email</label>
-          <input
-            className="rounded border border-gray/50 py-2 pl-2"
-            type="email"
-            name="user_email"
-            placeholder="Your email"
-          />
-        </div>
-        <div className="flex flex-col w-full">
-          <label className="font-semibold mt-6 mb-2">Message</label>
-          <textarea
-            className="rounded border border-gray/50 py-2 pl-2"
-            name="message"
-            placeholder="Your message"
-          />
-        </div>
-        <button
-          className="mt-10 border-black hover:bg-primary hover:text-white hover:border-none py-2 px-10 rounded-lg text-lg border cursor-pointer transition-all duration-400 ease-in"
-          type="submit"
-          value="Send"
-        >
-          Send
-        </button>
+
         {status === true && (
           <p className="mt-4 text-primary">
             Your message was sent successfully

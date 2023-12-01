@@ -1,6 +1,6 @@
 "use client";
 
-import { HTMLMotionProps, motion, Variants } from "framer-motion";
+import { HTMLMotionProps, motion, useInView, Variants } from "framer-motion";
 import { useRef, FC, ReactNode } from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
@@ -15,7 +15,7 @@ type Custom = Pick<Props, "delay">;
 
 const variants: Variants = {
   hide: () => ({
-    translateY: 180,
+    translateY: 30,
     opacity: 0,
   }),
   show: ({ delay }: Custom) => ({

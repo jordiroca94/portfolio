@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Button from "./Button";
 import TextAnimation from "./animations/TextAnimation";
+import SimpleAnimation from "./animations/SimpleAnimation";
 
 const ProjectsSlider = () => {
   const settings = {
@@ -90,36 +91,38 @@ const ProjectsSlider = () => {
           Projects
         </h2>
       </TextAnimation>
-      <Slider className="sliderGaps" {...settings}>
-        {dataSlider.map((item, index) => (
-          <div
-            key={index}
-            className=" rounded-lg cursor-pointer bg-lightGray/50"
-          >
-            <div className="w-full object-cover">
-              <Image
-                src={item.linkImg}
-                className="rounded-lg aspect-[1.762/1] "
-                alt="My Image"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="text-2xl font-light text-black uppercase mb-4">
-                {item.title}
-              </h3>
-              <div className="w-fit">
-                <Button
-                  className="px-3 py-1"
-                  whiteBg
-                  openNewTab
-                  link={item.link}
-                  label="Clients website"
+      <SimpleAnimation>
+        <Slider className="sliderGaps" {...settings}>
+          {dataSlider.map((item, index) => (
+            <div
+              key={index}
+              className=" rounded-lg cursor-pointer bg-lightGray/50"
+            >
+              <div className="w-full object-cover">
+                <Image
+                  src={item.linkImg}
+                  className="rounded-lg aspect-[1.762/1] "
+                  alt="My Image"
                 />
               </div>
+              <div className="p-4">
+                <h3 className="text-2xl font-light text-black uppercase mb-4">
+                  {item.title}
+                </h3>
+                <div className="w-fit">
+                  <Button
+                    className="px-3 py-1"
+                    whiteBg
+                    openNewTab
+                    link={item.link}
+                    label="Clients website"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      </SimpleAnimation>
     </Container>
   );
 };

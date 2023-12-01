@@ -4,6 +4,7 @@ import React from "react";
 import image from "../public/assets/jordi-roca.png";
 import Container from "./Container";
 import TextAnimation from "./animations/TextAnimation";
+import SimpleAnimation from "./animations/SimpleAnimation";
 
 const Introduction = () => {
   return (
@@ -17,11 +18,13 @@ const Introduction = () => {
           </div>
         </TextAnimation>
         <div className="sm:w-1/2 lg:w-1/3 py-10">
-          <Image
-            className="rounded-full h-full w-full object-cover"
-            src={image}
-            alt="Jordi-Roca"
-          />
+          <SimpleAnimation>
+            <Image
+              className="rounded-full h-full w-full object-cover"
+              src={image}
+              alt="Jordi-Roca"
+            />
+          </SimpleAnimation>
         </div>
       </div>
     </Container>
