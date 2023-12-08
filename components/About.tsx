@@ -49,16 +49,15 @@ const About = () => {
             <br />
             <p>
               I have social and creative skills as well as a wide perspective to
-              see the picture and be able to break down challenges in small
-              pieces. I value teamwork and the chance to innovate and be
-              creative. As I am a proactive person I really enjoy to be involved
-              in multiple parts on a project and sharing ideas.
+              see the picture. I value teamwork and the chance to innovate and
+              be creative.
             </p>
             <br />
             <p>
-              As a front end developer I have strong skills in Typescript and
-              some Javascript frameworks such as React.js and Angular. I also
-              have skills building small APIS using Node.js & Mongo DB.
+              As a front end developer I have strong skills in Javascript and
+              Typescript, mastering some of its frameworks such as React and
+              Angular. I also have skills building small APIS using Node.js &
+              Mongo DB.
             </p>
             <br />
             <p>
@@ -69,7 +68,7 @@ const About = () => {
                 href={"#humanRights"}
               >
                 {" "}
-                Human Rights
+                human rights
               </a>
             </p>
           </div>
