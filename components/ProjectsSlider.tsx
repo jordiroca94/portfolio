@@ -55,32 +55,45 @@ const ProjectsSlider = () => {
   const dataSlider = [
     {
       title: "wikiparfum ",
+      description: "Digital library to search fragrances",
       linkImg: image1,
+      stack: "React.js & Typescript",
       link: "https://www.wikiparfum.com/en",
     },
     {
       title: "hp virtual booth",
+      description: "HP large format printers and plotters with technology",
       linkImg: image2,
+      stack: "React.js & Typescript",
       link: "https://largeformat.hp.com/uk",
     },
     {
-      title: "klein",
-      linkImg: image3,
-      link: "https://www.klein.pro/en-uk",
-    },
-    {
-      title: "clowid",
+      title: "Clowid",
+      description:
+        "Website to manage digital receipts, analytics, marketing and points of sale.",
       linkImg: image4,
+      stack: "Angular & Typescript",
       link: "https://www.clowid.com/",
     },
     {
-      title: "primavera sound",
+      title: "klein",
+      description: "Ecommerce specialized in door's design",
+      linkImg: image3,
+      stack: "React.js & Typescript",
+      link: "https://www.klein.pro/en-uk",
+    },
+    {
+      title: "Primavera Sound",
+      description: "Music festival",
       linkImg: image5,
+      stack: "React.js & Typescript",
       link: "https://www.primaverasound.com/en/",
     },
     {
-      title: "scopely",
+      title: "Scopely",
+      description: "Mobile game development & editing",
       linkImg: image6,
+      stack: "React.js & Typescript",
       link: "https://www.scopely.com/",
     },
   ];
@@ -96,7 +109,7 @@ const ProjectsSlider = () => {
           {dataSlider.map((item, index) => (
             <div
               key={index}
-              className=" rounded-lg cursor-pointer bg-lightGray/50"
+              className="rounded-lg cursor-pointer bg-lightGray/50"
             >
               <div className="w-full object-cover">
                 <Image
@@ -109,6 +122,13 @@ const ProjectsSlider = () => {
                 <h3 className="text-2xl font-light text-black uppercase mb-4">
                   {item.title}
                 </h3>
+                <p className="text-lg font-light pt-2 pb-3">
+                  {item.description}
+                </p>
+                <div className="flex items-center gap-2 pb-3">
+                  <h6 className="font-semibold text-lg">Main Stack:</h6>
+                  <p className="text-lg font-light">{item.stack}</p>
+                </div>
                 <div className="w-fit">
                   <Button
                     className="px-3 py-1"

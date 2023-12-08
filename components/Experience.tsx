@@ -14,8 +14,8 @@ const Experience = () => {
       company: "ClowID",
       date: "March to June 2022",
       description:
-        "Front End development of ClowID web app (fintech swedish startup) using Agile methodology.",
-      stack: "Front-end: JavaScript (ES6) | TypeScript | Angular 12 & Tailwind",
+        "Developing of the graphical user interface of ClowID web app ( swedish fintech). ",
+      stack: "STACK: JavaScript (ES6) | TypeScript | Angular 12 | Tailwind",
       logo: logoClowid,
       link: "https://www.clowid.com",
     },
@@ -23,9 +23,10 @@ const Experience = () => {
       key: "2",
       company: "Dallonses",
       date: "August 2022 - Currently",
-      description: "Front End development of Dallonses",
+      description:
+        "Front end developer in diferent projects using AGILE methodology",
       stack:
-        "Front-end: Javascript(ES6) | TypeScript | React.js  | Next.js & Tailwind",
+        "STACK: Javascript(ES6) | TypeScript | React.js  | Next.js | Tailwind",
       logo: logoDallonses,
       link: "https://www.dallonses.com",
     },
@@ -44,7 +45,7 @@ const Experience = () => {
             <Image
               className="rounded-lg max-h-64 w-full object-cover"
               src={item.logo}
-              alt="Jordi-Roca"
+              alt={item.company}
             />
             <div className="flex flex-col justify-between h-full">
               <div>
