@@ -62,15 +62,14 @@ const ProjectsSlider = () => {
     },
     {
       title: "hp virtual booth",
-      description: "HP large format printers and plotters with technology",
+      description: "HP large format printers and plotters",
       linkImg: image2,
       stack: "React.js & Typescript",
       link: "https://largeformat.hp.com/uk",
     },
     {
       title: "Clowid",
-      description:
-        "Website to manage digital receipts, analytics, marketing and points of sale.",
+      description: "Digital management receipts and analytics.",
       linkImg: image4,
       stack: "Angular & Typescript",
       link: "https://www.clowid.com/",
@@ -105,7 +104,7 @@ const ProjectsSlider = () => {
         </h2>
       </TextAnimation>
       <SimpleAnimation>
-        <Slider className="sliderGaps" {...settings}>
+        <Slider className="sliderGaps " {...settings}>
           {dataSlider.map((item, index) => (
             <div
               key={index}

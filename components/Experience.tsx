@@ -14,7 +14,7 @@ const Experience = () => {
       company: "ClowID",
       date: "March to June 2022",
       description:
-        "Developing of the graphical user interface of ClowID web app ( swedish fintech). ",
+        "Developing the graphical user interface of ClowID web app ( swedish fintech). ",
       stack: "STACK: JavaScript (ES6) | TypeScript | Angular 12 | Tailwind",
       logo: logoClowid,
       link: "https://www.clowid.com",
@@ -55,7 +55,7 @@ const Experience = () => {
                 <h5>{item.stack}</h5>
               </div>
               <div className="w-fit py-4">
-                <Button openNewTab link={item.link} label="Website" />
+                <Button openNewTab link={item.link} label="See Website" />
               </div>
             </div>
           </SimpleAnimation>
