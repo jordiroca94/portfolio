@@ -34,7 +34,9 @@ const Experience = () => {
   return (
     <Container id="experience" className="bg-matteBlack text-white">
       <TextAnimation>
-        <h2 className="flex justify-center font-bold text-5xl">Experience</h2>
+        <h2 className="flex justify-center font-bold text-4xl lg:text-5xl">
+          Experience
+        </h2>
       </TextAnimation>
       <div className="flex flex-col lg:flex-row justify-center gap-20 pt-20">
         {jobExperiences.map((item) => (

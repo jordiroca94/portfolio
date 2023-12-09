@@ -99,7 +99,7 @@ const ProjectsSlider = () => {
   return (
     <Container id="projects" className="bg-white lg:py-32 py-20">
       <TextAnimation>
-        <h2 className="font-bold text-5xl text-primary pb-10 flex justify-center">
+        <h2 className="font-bold text-4xl lg:text-5xl text-primary pb-10 flex justify-center">
           Projects
         </h2>
       </TextAnimation>

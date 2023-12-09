@@ -29,6 +29,9 @@ const Contact = () => {
         }
       );
     e.target.reset();
+    setTimeout(() => {
+      setStatus(false);
+    }, 5000);
   };
 
   return (
@@ -79,7 +82,7 @@ const Contact = () => {
             />
           </div>
           <button
-            className="mt-10 border-black hover:bg-primary hover:text-white hover:border-none py-2 px-10 rounded-lg text-lg border cursor-pointer transition-all duration-400 ease-in"
+            className="w-full md:w-auto mt-10 border-black hover:bg-primary hover:text-white hover:border-none py-2 px-10 rounded-lg text-lg border cursor-pointer transition-all duration-400 ease-in"
             type="submit"
             value="Send"
           >

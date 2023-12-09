@@ -11,7 +11,7 @@ const HumanRights = () => {
     <Container id="humanRights" className="bg-matteBlack lg:h-screen">
       <div className="flex flex-col items-center justify-center">
         <TextAnimation className="flex justify-center">
-          <h2 className="font-bold text-5xl text-white">
+          <h2 className="font-bold text-4xl lg:text-5xl text-white text-center">
             Involved with Human Rights
           </h2>
         </TextAnimation>
@@ -71,7 +71,7 @@ const HumanRights = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <h5 className="flex justify-center text-white hover:underline">
+              <h5 className="flex justify-center text-white hover:underline text-center">
                 Read more about my experience in Still I Rise
               </h5>
             </a>

@@ -9,7 +9,9 @@ const About = () => {
     <Container id="about">
       <div className="flex flex-col items-center justify-center">
         <TextAnimation className="flex justify-center">
-          <h2 className="font-bold text-5xl text-primary">About Me</h2>
+          <h2 className="font-bold text-4xl lg:text-5xl text-primary">
+            About Me
+          </h2>
         </TextAnimation>
         <div className="flex lg:w-2/3 pt-4">
           <div className="flex-1 flex flex-col items-center">
