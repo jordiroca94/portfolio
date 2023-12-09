@@ -2,18 +2,18 @@
 import React, { FC, useState } from "react";
 
 type Props = {
-  isOpen: boolean;
+  open: boolean;
+  setOpen: any;
   onClick?: () => void;
   className?: string;
 };
 
 const BurgerButton: FC<Props> = ({
   onClick,
-  isOpen = false,
+  open,
+  setOpen,
   className = "",
 }) => {
-  const [open, setOpen] = useState<boolean>(isOpen);
-
   const handleOpen = () => {
     setOpen(!open);
     if (onClick) {

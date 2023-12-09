@@ -7,6 +7,8 @@ const Header = () => {
   const [scrollPos, setScrollPos] = useState<number>(0);
   const [show, setShow] = useState<boolean>(true);
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
+
   useLockBodyScroll(mobileMenu);
 
   useEffect(() => {
@@ -70,8 +72,9 @@ const Header = () => {
           ))}
         </div>
         <BurgerButton
+          open={open}
+          setOpen={setOpen}
           onClick={() => setMobileMenu(!mobileMenu)}
-          isOpen={mobileMenu}
           className="lg:hidden"
         />
       </div>
@@ -80,7 +83,9 @@ const Header = () => {
           <div className="flex flex-col gap-6">
             {navLinks.map((item) => (
               <a
-                onClick={() => setMobileMenu(false)}
+                onClick={() => {
+                  setMobileMenu(false), setOpen(!open);
+                }}
                 href={"#" + item.label.toLowerCase()}
                 key={item.key}
               >
