@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import BurgerButton from "./BurguerButton";
 import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 
@@ -8,7 +8,6 @@ const Header = () => {
   const [show, setShow] = useState<boolean>(true);
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(false);
-
   useLockBodyScroll(mobileMenu);
 
   useEffect(() => {
@@ -80,7 +79,7 @@ const Header = () => {
       </div>
       {mobileMenu && (
         <div className="z-40 flex w-full flex-col overflow-hidden bg-white p-6">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col items-center pt-4 gap-6">
             {navLinks.map((item) => (
               <a
                 onClick={() => {
