@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Container from "./Container";
 import Armonia from "../public/assets/armonia.jpeg";
@@ -5,10 +6,13 @@ import SIR from "../public/assets/stillIRise.png";
 import Image from "next/image";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import TextAnimation from "./animations/TextAnimation";
+import useColor from "@/hooks/useColor";
 
 const HumanRights = () => {
+  const ref = useColor<HTMLDivElement>();
+
   return (
-    <Container id="humanRights" className="bg-matteBlack lg:h-screen">
+    <Container ref={ref} id="humanRights" className="bg-matteBlack lg:h-screen">
       <div className="flex flex-col items-center justify-center">
         <TextAnimation className="flex justify-center">
           <h2 className="font-bold text-4xl lg:text-5xl text-white text-center">

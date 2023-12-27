@@ -5,10 +5,13 @@ import image from "../public/assets/jordi-roca.png";
 import Container from "./Container";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
+import useColor from "@/hooks/useColor";
 
 const Introduction = () => {
+  const ref = useColor<HTMLDivElement>();
+
   return (
-    <Container className="h-screen bg-matteBlack text-white">
+    <Container ref={ref} className="h-screen bg-matteBlack text-white">
       <div className="flex flex-col justify-center items-center pt-20 lg:pt-10">
         <TextAnimation>
           <div className="flex flex-col text-center gap-2">

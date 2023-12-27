@@ -4,33 +4,9 @@ import BurgerButton from "./BurguerButton";
 import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 
 const Header = () => {
-  const [scrollPos, setScrollPos] = useState<number>(0);
-  const [show, setShow] = useState<boolean>(true);
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(false);
   useLockBodyScroll(mobileMenu);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY + 150;
-
-      if (currentScrollPos > 200) {
-        if (currentScrollPos > scrollPos) {
-          setShow(false);
-        } else {
-          setShow(true);
-        }
-      }
-
-      setScrollPos(currentScrollPos);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrollPos]);
 
   const navLinks = [
     {
@@ -53,13 +29,12 @@ const Header = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full bg-white p-6 ${
-        show
-          ? "visible translate-y-0 transition duration-300 ease-in-out"
-          : "-translate-y-32 transition delay-150 duration-500 ease-in-out"
-      }`}
+      id="header"
+      className={
+        "fixed top-0 z-50 w-full p-6 visible translate-y-0 transition duration-500 ease-in-out"
+      }
     >
-      <div className="px-0 lg:px-10 flex justify-between text-black text-primary">
+      <div className="px-0 lg:px-10 flex justify-between">
         <a className="font-extrabold text-2xl" href="/">
           JORDI ROCA
         </a>
@@ -78,7 +53,7 @@ const Header = () => {
         />
       </div>
       {mobileMenu && (
-        <div className="z-40 flex w-full flex-col overflow-hidden bg-white p-6">
+        <div className="z-40 flex w-full flex-col overflow-hidden p-6">
           <div className="flex flex-col items-center pt-4 gap-6">
             {navLinks.map((item) => (
               <a

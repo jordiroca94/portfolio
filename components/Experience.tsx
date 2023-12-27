@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Container from "./Container";
 import Image from "next/image";
@@ -6,8 +7,11 @@ import logoClowid from "../public/assets/clowIdLogo.png";
 import Button from "./Button";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
+import useColor from "@/hooks/useColor";
 
 const Experience = () => {
+  const ref = useColor<HTMLDivElement>();
+
   const jobExperiences = [
     {
       key: "1",
@@ -32,7 +36,7 @@ const Experience = () => {
     },
   ];
   return (
-    <Container id="experience" className="bg-matteBlack text-white">
+    <Container ref={ref} id="experience" className="bg-matteBlack text-white">
       <TextAnimation>
         <h2 className="flex justify-center font-bold text-4xl lg:text-5xl">
           Experience

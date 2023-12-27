@@ -1,12 +1,16 @@
+"use client";
 import React from "react";
 import Container from "./Container";
 import Button from "./Button";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
+import useColor from "@/hooks/useColor";
 
 const About = () => {
+  const ref = useColor<HTMLDivElement>();
+
   return (
-    <Container id="about">
+    <Container className="bg-white" ref={ref} id="about">
       <div className="flex flex-col items-center justify-center">
         <TextAnimation className="flex justify-center">
           <h2 className="font-bold text-4xl lg:text-5xl text-primary">

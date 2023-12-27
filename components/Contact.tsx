@@ -4,8 +4,11 @@ import Container from "./Container";
 import emailjs from "@emailjs/browser";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
+import useColor from "@/hooks/useColor";
 
 const Contact = () => {
+  const ref = useColor<HTMLDivElement>();
+
   const form: any = useRef();
   const [status, setStatus] = useState(false);
 
@@ -35,7 +38,11 @@ const Contact = () => {
   };
 
   return (
-    <Container id="contact" className="flex flex-col items-center">
+    <Container
+      ref={ref}
+      id="contact"
+      className="bg-white flex flex-col items-center"
+    >
       <TextAnimation className="flex justify-center">
         <h2 className="font-bold text-5xl text-primary mb-20">Contact Me</h2>
       </TextAnimation>

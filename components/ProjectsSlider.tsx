@@ -15,8 +15,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Button from "./Button";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
+import useColor from "@/hooks/useColor";
 
 const ProjectsSlider = () => {
+  const ref = useColor<HTMLDivElement>();
+
   const settings = {
     dots: true,
     infinite: false,
@@ -97,7 +100,7 @@ const ProjectsSlider = () => {
     },
   ];
   return (
-    <Container id="projects" className="bg-white lg:py-32 py-20">
+    <Container ref={ref} id="projects" className="bg-white lg:py-32 py-20">
       <TextAnimation>
         <h2 className="font-bold text-4xl lg:text-5xl text-primary pb-10 flex justify-center">
           Projects
