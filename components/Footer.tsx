@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import SimpleAnimation from "./animations/SimpleAnimation";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <Container className="bg-matteBlack">
       <footer className="text-white flex items-center flex-col gap-4">
