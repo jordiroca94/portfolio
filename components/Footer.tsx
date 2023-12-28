@@ -21,7 +21,7 @@ const Footer = () => {
           </a>
         </SimpleAnimation>
         <SimpleAnimation>
-          <small>Copyright &copy; 2023 Jordi Roca</small>
+          <small>Copyright &copy; {year} Jordi Roca</small>
         </SimpleAnimation>
       </footer>
     </Container>

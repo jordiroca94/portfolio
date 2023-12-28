@@ -17,7 +17,7 @@ const Introduction = () => {
           <div className="flex flex-col text-center gap-2">
             <h3 className="text-lg">Hello I am </h3>
             <h1 className="text-5xl font-semibold">Jordi Roca</h1>
-            <h3 className="text-2xl">Front end Developer </h3>
+            <h3 className="text-2xl">Software Developer </h3>
           </div>
         </TextAnimation>
         <div className="sm:w-1/2 lg:w-1/3 py-10">

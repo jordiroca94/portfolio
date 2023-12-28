@@ -41,7 +41,7 @@ const About = () => {
         <SimpleAnimation className="flex justify-center">
           <div className="flex flex-col font-light items-center text-center lg:w-3/5 py-4 text-lg text-gray">
             <p>
-              I am a front end developer with over 2 years of experience. I am
+              I am a software developer with over 2 years of experience. I am
               currently working in{" "}
               <a
                 className="text-primary font-semibold hover:font-bold "
