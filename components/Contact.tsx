@@ -83,6 +83,7 @@ const Contact = () => {
           <div className="flex flex-col w-full">
             <label className="font-semibold mt-6 mb-2">Message</label>
             <textarea
+              rows={4}
               className="rounded border border-gray/50 py-2 pl-2"
               name="message"
               placeholder="Message"
