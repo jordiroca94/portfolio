@@ -20,6 +20,10 @@ html{
   scroll-behavior:smooth;
 }
 
+textarea {
+  resize: none;
+}
+
 /* BUTTON ANIMATIONS */
 
 .underlineAfterHover {

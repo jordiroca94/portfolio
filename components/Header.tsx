@@ -35,7 +35,7 @@ const Header = () => {
       }
     >
       <div className="px-0 lg:px-10 flex justify-between">
-        <a className="font-extrabold text-2xl" href="/">
+        <a className="font-bold text-2xl" href="#">
           JORDI ROCA
         </a>
         <div className="lg:flex gap-6 hidden">

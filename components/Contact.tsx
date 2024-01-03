@@ -62,7 +62,7 @@ const Contact = () => {
           </p>
         </TextAnimation>
         <SimpleAnimation className="w-full">
-          <div className="flex flex-col sm:w-1/2 ">
+          <div className="flex flex-col">
             <label className="font-semibold mb-2">Name</label>
             <input
               className="rounded border border-gray/50 py-2 pl-2"
@@ -71,7 +71,7 @@ const Contact = () => {
               placeholder="Full name"
             />
           </div>
-          <div className="flex flex-col sm:w-1/2">
+          <div className="flex flex-col">
             <label className="font-semibold mt-6 mb-2">Email</label>
             <input
               className="rounded border border-gray/50 py-2 pl-2"
@@ -89,7 +89,7 @@ const Contact = () => {
             />
           </div>
           <button
-            className="w-full md:w-auto mt-10 border-black hover:bg-primary hover:text-white hover:border-none py-2 px-10 rounded-lg text-lg border cursor-pointer transition-all duration-400 ease-in"
+            className="w-full md:w-auto mt-10 border-gray/50 hover:bg-primary hover:text-white hover:border-none py-2 px-10 rounded-lg text-lg border cursor-pointer transition-all duration-400 ease-in"
             type="submit"
             value="Send"
           >
