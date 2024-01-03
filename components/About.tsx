@@ -5,7 +5,7 @@ import Button from "./Button";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
-
+import CountUp from "react-countup";
 const About = () => {
   const ref = useColor<HTMLDivElement>();
 
@@ -22,18 +22,43 @@ const About = () => {
             <SimpleAnimation>
               <a
                 href="#experience"
-                className="text-center flex flex-col p-8 hover:bg-primary hover:text-white  rounded-lg transition-all duration-500 ease-in"
+                className="text-center flex flex-col p-8 hover:bg-primary group hover:text-white  rounded-lg transition-all duration-500 ease-in"
               >
-                <h3 className="text-2xl font-semibold">Experience</h3>
-                <h4 className="text-lg">+2 Years Experience</h4>
+                <h3 className="text-2xl group-hover:text-white font-semibold">
+                  Experience
+                </h3>
+                <div className="flex gap-2 text-lg text-primary group-hover:text-white pt-2">
+                  <span>+</span>
+                  <CountUp
+                    delay={2}
+                    enableScrollSpy
+                    duration={5}
+                    start={0}
+                    end={2}
+                  />
+                  <p> Years Experience</p>
+                </div>
               </a>
             </SimpleAnimation>
           </div>
           <SimpleAnimation className="flex-1 flex flex-col items-center">
             <a href="#projects">
-              <div className="text-center flex flex-col p-8 hover:bg-primary hover:text-white  rounded-lg transition-all duration-500 ease-in">
-                <h3 className="text-2xl font-semibold">Projects</h3>
-                <h4 className="text-lg ">Over 8 Clients</h4>
+              <div className="text-center flex flex-col p-8 hover:bg-primary group hover:text-white  rounded-lg transition-all duration-500 ease-in">
+                <h3 className="text-2xl font-semibold group-hover:text-white">
+                  Projects
+                </h3>
+                <div className="flex gap-2 text-lg text-primary group-hover:text-white pt-2">
+                  <span>Over</span>
+                  <CountUp
+                    className="text-lg"
+                    delay={2}
+                    enableScrollSpy
+                    duration={5}
+                    start={0}
+                    end={8}
+                  />
+                  <p> Clients</p>
+                </div>
               </div>
             </a>
           </SimpleAnimation>
