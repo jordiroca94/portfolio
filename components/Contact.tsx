@@ -63,7 +63,7 @@ const Contact = () => {
         </TextAnimation>
         <SimpleAnimation className="w-full">
           <div className="flex flex-col">
-            <label className="font-semibold mb-2">Name</label>
+            <label className="font-medium mb-2">Name</label>
             <input
               className="rounded border border-gray/50 py-2 pl-2"
               type="text"
@@ -72,7 +72,7 @@ const Contact = () => {
             />
           </div>
           <div className="flex flex-col">
-            <label className="font-semibold mt-6 mb-2">Email</label>
+            <label className="font-medium mt-6 mb-2">Email</label>
             <input
               className="rounded border border-gray/50 py-2 pl-2"
               type="email"
@@ -81,7 +81,7 @@ const Contact = () => {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label className="font-semibold mt-6 mb-2">Message</label>
+            <label className="font-medium mt-6 mb-2">Message</label>
             <textarea
               rows={4}
               className="rounded border border-gray/50 py-2 pl-2"

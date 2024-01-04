@@ -64,7 +64,7 @@ const About = () => {
           </SimpleAnimation>
         </div>
         <SimpleAnimation className="flex justify-center">
-          <div className="flex flex-col font-light items-center text-center lg:w-3/5 py-4 text-lg text-gray">
+          <div className="flex flex-col font-light items-center text-center lg:w-3/5 py-4 text-base lg:text-lg text-gray">
             <p>
               I am a software developer with over 2 years of experience. I am
               currently working in{" "}
@@ -85,10 +85,13 @@ const About = () => {
             </p>
             <br />
             <p>
-              As a front end developer I have strong skills in Javascript and
-              Typescript, mastering some of its frameworks such as React and
-              Angular. I also have skills building small APIS using Node.js &
-              Mongo DB.
+              As a front end developer I have strong skills in{" "}
+              <a className="text-primary font-semibold "> Javascript</a> and
+              <a className="text-primary font-semibold "> Typescript</a>,
+              mastering some of its frameworks such as{" "}
+              <a className="text-primary font-semibold "> React</a> and{" "}
+              <a className="text-primary font-semibold "> Angular</a>. I also
+              have skills building small APIS using Node.js & Mongo DB.
             </p>
             <br />
             <p>

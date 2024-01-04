@@ -19,7 +19,7 @@ const HumanRights = () => {
             Involved with Human Rights
           </h2>
         </TextAnimation>
-        <div className="lg:w-3/4 text-white py-10 text-lg">
+        <div className="lg:w-3/4 text-white py-10 text-base lg:text-lg">
           <TextAnimation>
             <p className="mb-4 text-justify">
               On 2020 I was working for a year in Greece involved with the
