@@ -36,7 +36,7 @@ const About = () => {
                     start={0}
                     end={2}
                   />
-                  <p> Years Experience</p>
+                  <p>Years</p>
                 </div>
               </a>
             </SimpleAnimation>
