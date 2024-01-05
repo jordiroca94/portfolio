@@ -15,6 +15,7 @@ const config: Config = {
         matteBlack: "#28282B",
         gray: "#808080",
         lightGray: "#E8E9E8",
+        red: "#ED4337",
       },
     },
   },

@@ -88,7 +88,7 @@ const About = () => {
               As a front end developer I have strong skills in{" "}
               <a className="text-primary font-semibold "> Javascript</a> and
               <a className="text-primary font-semibold "> Typescript</a>,
-              mastering some of its frameworks such as{" "}
+              mastering some of its libraries and frameworks such as{" "}
               <a className="text-primary font-semibold "> React</a> and{" "}
               <a className="text-primary font-semibold "> Angular</a>. I also
               have skills building small APIS using Node.js & Mongo DB.

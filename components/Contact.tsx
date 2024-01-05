@@ -5,16 +5,36 @@ import emailjs from "@emailjs/browser";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { userinfoSchema } from "@/app/validation/userInfo";
+
+type Inputs = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 const Contact = () => {
   const ref = useColor<HTMLDivElement>();
-
   const form: any = useRef();
   const [status, setStatus] = useState(false);
 
-  const sendEmail = (e: any) => {
-    e.preventDefault();
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<Inputs>({
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    resolver: zodResolver(userinfoSchema),
+  });
 
+  const sendEmail = (e: any) => {
     emailjs
       .sendForm(
         "service_gcjv7fe",
@@ -31,7 +51,7 @@ const Contact = () => {
           console.log(error.text);
         }
       );
-    e.target.reset();
+    reset();
     setTimeout(() => {
       setStatus(false);
     }, 5000);
@@ -49,7 +69,7 @@ const Contact = () => {
       <form
         className="flex flex-col items-start lg:w-2/5 text-lg"
         ref={form}
-        onSubmit={sendEmail}
+        onSubmit={handleSubmit(sendEmail)}
       >
         <TextAnimation className="w-full mb-10">
           <p>
@@ -67,27 +87,36 @@ const Contact = () => {
             <input
               className="rounded border border-gray/50 py-2 pl-2"
               type="text"
-              name="user_name"
               placeholder="Full name"
+              {...register("name")}
             />
+            {errors.name?.message && (
+              <div className="text-red pt-1">{errors.name?.message}</div>
+            )}
           </div>
           <div className="flex flex-col">
             <label className="font-medium mt-6 mb-2">Email</label>
             <input
               className="rounded border border-gray/50 py-2 pl-2"
               type="email"
-              name="user_email"
               placeholder="Email"
+              {...register("email")}
             />
+            {errors.email?.message && (
+              <div className="text-red pt-1">{errors.email?.message}</div>
+            )}
           </div>
           <div className="flex flex-col w-full">
             <label className="font-medium mt-6 mb-2">Message</label>
             <textarea
               rows={4}
               className="rounded border border-gray/50 py-2 pl-2"
-              name="message"
               placeholder="Message"
+              {...register("message")}
             />
+            {errors.message?.message && (
+              <div className="text-red pt-1">{errors.message?.message}</div>
+            )}
           </div>
           <button
             className="w-full md:w-auto mt-10 border-gray/50 hover:bg-primary hover:text-white hover:border-none py-2 px-10 rounded-lg text-lg border cursor-pointer transition-all duration-400 ease-in"
