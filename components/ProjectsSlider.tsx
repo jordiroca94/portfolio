@@ -64,7 +64,7 @@ const ProjectsSlider = () => {
       link: "https://www.wikiparfum.com/en",
     },
     {
-      title: "hp virtual booth",
+      title: "Hp virtual booth",
       description: "HP large format printers and plotters",
       linkImg: image2,
       stack: "React.js & Typescript",
@@ -78,7 +78,7 @@ const ProjectsSlider = () => {
       link: "https://www.clowid.com/",
     },
     {
-      title: "klein",
+      title: "Klein",
       description: "Ecommerce specialized in door's design",
       linkImg: image3,
       stack: "React.js & Typescript",
@@ -117,7 +117,7 @@ const ProjectsSlider = () => {
                 <Image
                   src={item.linkImg}
                   className="rounded-lg aspect-[1.762/1] "
-                  alt="My Image"
+                  alt={item.title}
                 />
               </div>
               <div className="p-4">

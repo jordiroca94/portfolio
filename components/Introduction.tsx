@@ -25,7 +25,7 @@ const Introduction = () => {
             <Image
               className="rounded-full h-full w-full object-cover"
               src={image}
-              alt="Jordi-Roca"
+              alt="Jordi Roca"
             />
           </SimpleAnimation>
         </div>

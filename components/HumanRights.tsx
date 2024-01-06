@@ -47,7 +47,7 @@ const HumanRights = () => {
                   <Image
                     src={Armonia}
                     className="rounded-lg object-cover w-full h-full "
-                    alt="My Image"
+                    alt="Armonia Project NGO"
                   />
                 </a>
               </SimpleAnimation>
@@ -63,7 +63,7 @@ const HumanRights = () => {
                   <Image
                     src={SIR}
                     className="rounded-lg object-cover w-full h-full "
-                    alt="My Image"
+                    alt="Still I Rise NGO"
                   />
                 </a>
               </SimpleAnimation>
