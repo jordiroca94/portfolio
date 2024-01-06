@@ -87,39 +87,54 @@ const Contact = () => {
         </TextAnimation>
         <SimpleAnimation className="w-full">
           <div className="flex flex-col">
-            <label className="font-medium mb-2">Name</label>
+            <label htmlFor="name" className="font-medium mb-2">
+              Name
+            </label>
             <input
+              id="name"
               className="rounded border border-gray/50 py-2 pl-2"
               type="text"
               placeholder="Full name"
               {...register("name")}
             />
             {errors.name?.message && (
-              <div className="text-red pt-1">{errors.name?.message}</div>
+              <p aria-describedby="name" className="text-red pt-1">
+                {errors.name?.message}
+              </p>
             )}
           </div>
           <div className="flex flex-col">
-            <label className="font-medium mt-6 mb-2">Email</label>
+            <label htmlFor="email" className="font-medium mt-6 mb-2">
+              Email
+            </label>
             <input
+              id="email"
               className="rounded border border-gray/50 py-2 pl-2"
               type="email"
               placeholder="Email"
               {...register("email")}
             />
             {errors.email?.message && (
-              <div className="text-red pt-1">{errors.email?.message}</div>
+              <p aria-describedby="email" className="text-red pt-1">
+                {errors.email?.message}
+              </p>
             )}
           </div>
           <div className="flex flex-col w-full">
-            <label className="font-medium mt-6 mb-2">Message</label>
+            <label htmlFor="message" className="font-medium mt-6 mb-2">
+              Message
+            </label>
             <textarea
+              id="message"
               rows={4}
               className="rounded border border-gray/50 py-2 pl-2"
               placeholder="Message"
               {...register("message")}
             />
             {errors.message?.message && (
-              <div className="text-red pt-1">{errors.message?.message}</div>
+              <p aria-describedby="message" className="text-red pt-1">
+                {errors.message?.message}
+              </p>
             )}
           </div>
           <button
