@@ -8,6 +8,7 @@ import useColor from "@/hooks/useColor";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userinfoSchema } from "@/app/validation/userInfo";
+import Loader from "./Loader";
 
 type Inputs = {
   name: string;
@@ -19,12 +20,13 @@ const Contact = () => {
   const ref = useColor<HTMLDivElement>();
   const form: any = useRef();
   const [status, setStatus] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const {
     handleSubmit,
     register,
     reset,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<Inputs>({
     defaultValues: {
       name: "",
@@ -35,6 +37,7 @@ const Contact = () => {
   });
 
   const sendEmail = (e: any) => {
+    setLoading(true);
     emailjs
       .sendForm(
         "service_gcjv7fe",
@@ -45,6 +48,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setLoading(false);
           setStatus(true);
         },
         (error) => {
@@ -123,7 +127,7 @@ const Contact = () => {
             type="submit"
             value="Send"
           >
-            Send
+            {loading ? <Loader /> : <div>Send</div>}
           </button>
         </SimpleAnimation>
 
