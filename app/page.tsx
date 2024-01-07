@@ -5,14 +5,14 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HumanRights from "@/components/HumanRights";
-import Introduction from "@/components/Introduction";
 import ProjectsSlider from "@/components/ProjectsSlider";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <main>
       <Header />
-      <Introduction />
+      <Hero />
       <About />
       <Experience />
       <ProjectsSlider />
