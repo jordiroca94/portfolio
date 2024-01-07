@@ -66,8 +66,9 @@ const About = () => {
         <SimpleAnimation className="flex justify-center">
           <div className="flex flex-col font-light items-center text-center lg:w-3/5 py-4 text-base lg:text-lg text-gray">
             <p>
-              I am a software developer with over 2 years of experience. I am
-              currently working in{" "}
+              {
+                "I'm a software developer with over 2 years of experience. Currently working in"
+              }{" "}
               <a
                 className="text-primary font-semibold hover:font-bold "
                 href={"#experience"}
@@ -95,8 +96,9 @@ const About = () => {
             </p>
             <br />
             <p>
-              Besides my tech skills, I am a bouldering fanatic and I like to
-              dive from time to time. I am very concerned about
+              {
+                "Besides my tech skills, I'm a bouldering fanatic and I like to dive from time to time. I'm very concerned about"
+              }
               <a
                 className="text-primary font-semibold hover:font-bold "
                 href={"#humanRights"}
@@ -111,7 +113,7 @@ const About = () => {
           <Button
             whiteBg
             openNewTab
-            link="https://drive.google.com/file/d/1skL-RuwG7sPbYrbzf1bmoCHtBTW7E896/view?usp=sharing"
+            link="https://drive.google.com/file/d/1iARgV-gOGbpgEJ8macYSdsyMUS6BhbsA/view?usp=sharing"
             label="Download CV"
           />
           <Button whiteBg link="#contact" label="Let s talk" />

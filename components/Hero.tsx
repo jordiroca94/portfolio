@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="flex flex-col lg:flex-row justify-center lg:justify-around items-center pt-20 lg:pt-32">
         <KeyboardAnimation
           className="text-3xl lg:text-6xl text-center lg:text-left"
-          text={["Hello I'am", "Jordi Roca", "Software Developer"]}
+          text={["Hello I'm", "Jordi Roca", "Software Developer"]}
           once
         />
         <div className="sm:w-1/2 lg:w-1/3 py-10">
