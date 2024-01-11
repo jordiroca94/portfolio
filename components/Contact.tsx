@@ -7,8 +7,14 @@ import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { userinfoSchema } from "@/app/validation/userInfo";
 import Loader from "./Loader";
+import { z } from "zod";
+
+const userinfoSchema = z.object({
+  email: z.string().email({ message: "An email is required." }),
+  name: z.string().min(1, { message: "A name is required" }),
+  message: z.string().min(1, { message: "A message is required" }),
+});
 
 type Inputs = {
   name: string;
