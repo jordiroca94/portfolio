@@ -3,29 +3,15 @@ import React, { useEffect, useRef, useState } from "react";
 import BurgerButton from "./BurguerButton";
 import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 
-const Header = () => {
+type Props = {
+  navLinks: string[];
+  logo: string;
+};
+
+const Header = ({ navLinks, logo }: Props) => {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(false);
   useLockBodyScroll(mobileMenu);
-
-  const navLinks = [
-    {
-      key: "1",
-      label: "About",
-    },
-    {
-      key: "2",
-      label: "Experience",
-    },
-    {
-      key: "3",
-      label: "Projects",
-    },
-    {
-      key: "4",
-      label: "Contact",
-    },
-  ];
 
   return (
     <nav
@@ -35,13 +21,13 @@ const Header = () => {
       }
     >
       <div className="px-0 lg:px-10 flex justify-between">
-        <a className="font-bold text-2xl" href="#">
-          JORDI ROCA
+        <a className="font-bold text-2xl uppercase" href="#">
+          {logo}
         </a>
         <div className="lg:flex gap-6 hidden">
-          {navLinks.map((item) => (
-            <a href={"#" + item.label.toLowerCase()} key={item.key}>
-              <h5 className="underlineAfterHover text-lg">{item.label}</h5>
+          {navLinks.map((link, index) => (
+            <a href={"#" + link.toLowerCase()} key={index}>
+              <h5 className="underlineAfterHover text-lg">{link}</h5>
             </a>
           ))}
         </div>
@@ -55,15 +41,15 @@ const Header = () => {
       {mobileMenu && (
         <div className="z-40 flex w-full flex-col overflow-hidden p-6">
           <div className="flex flex-col items-center pt-4 gap-6">
-            {navLinks.map((item) => (
+            {navLinks.map((link, index) => (
               <a
                 onClick={() => {
                   setMobileMenu(false), setOpen(!open);
                 }}
-                href={"#" + item.label.toLowerCase()}
-                key={item.key}
+                href={"#" + link.toLowerCase()}
+                key={index}
               >
-                <h5 className="underlineAfterHover text-lg">{item.label}</h5>
+                <h5 className="underlineAfterHover text-lg">{link}</h5>
               </a>
             ))}
           </div>
