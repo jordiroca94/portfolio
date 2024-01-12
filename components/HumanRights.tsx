@@ -25,7 +25,7 @@ const HumanRights = ({ title, text, items, cta }: Props) => {
   const ref = useColor<HTMLDivElement>();
 
   return (
-    <Container ref={ref} id="humanRights" className="bg-matteBlack lg:h-screen">
+    <Container ref={ref} id="humanRights" className="bg-matteBlack">
       <div className="flex flex-col items-center justify-center">
         <TextAnimation className="flex justify-center">
           <h2 className="font-bold text-4xl lg:text-5xl text-white text-center">

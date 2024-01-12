@@ -42,7 +42,7 @@ const Contact = () => {
     resolver: zodResolver(userinfoSchema),
   });
 
-  const sendEmail = (e: any) => {
+  const sendEmail = () => {
     setLoading(true);
     emailjs
       .sendForm(

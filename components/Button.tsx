@@ -2,7 +2,7 @@ import React from "react";
 
 type Props = {
   label: string;
-  link: any;
+  link: string;
   className?: string;
   download?: boolean;
   whiteBg?: boolean;
