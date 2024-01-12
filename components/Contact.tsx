@@ -10,23 +10,49 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Loader from "./Loader";
 import { z } from "zod";
 
-const userinfoSchema = z.object({
-  email: z.string().email({ message: "An email is required." }),
-  name: z.string().min(1, { message: "A name is required" }),
-  message: z.string().min(1, { message: "A message is required" }),
-});
-
 type Inputs = {
   name: string;
   email: string;
   message: string;
 };
 
-const Contact = () => {
+type FormFieldType = {
+  label: string;
+  placeholder: string;
+  error: string;
+};
+
+type Props = {
+  title: string;
+  text: string;
+  email: string;
+  nameField: FormFieldType;
+  emailField: FormFieldType;
+  messageField: FormFieldType;
+  sentSuccessfully: string;
+  sendLabel: string;
+};
+
+const Contact = ({
+  title,
+  text,
+  email,
+  nameField,
+  emailField,
+  messageField,
+  sentSuccessfully,
+  sendLabel,
+}: Props) => {
   const ref = useColor<HTMLDivElement>();
   const form: any = useRef();
   const [status, setStatus] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const userinfoSchema = z.object({
+    email: z.string().email({ message: emailField.error }),
+    name: z.string().min(1, { message: nameField.error }),
+    message: z.string().min(1, { message: messageField.error }),
+  });
 
   const {
     handleSubmit,
@@ -74,7 +100,7 @@ const Contact = () => {
       className="bg-white flex flex-col items-center"
     >
       <TextAnimation className="flex justify-center">
-        <h2 className="font-bold text-5xl text-primary mb-20">Contact Me</h2>
+        <h2 className="font-bold text-5xl text-primary mb-20">{title}</h2>
       </TextAnimation>
       <form
         className="flex flex-col items-start lg:w-2/5 text-lg"
@@ -83,24 +109,20 @@ const Contact = () => {
       >
         <TextAnimation className="w-full mb-10">
           <p>
-            {
-              "Do you have any question? Feel free to fill in this form or contact me in "
-            }
-            <u className="text-primary font-semibold no-underline">
-              jordirocasoler94@gmail.com
-            </u>
+            {text}
+            <u className="text-primary font-semibold no-underline">{email}</u>
           </p>
         </TextAnimation>
         <SimpleAnimation className="w-full">
           <div className="flex flex-col">
             <label htmlFor="name" className="font-medium mb-2">
-              Name
+              {nameField.label}
             </label>
             <input
               id="name"
               className="rounded border border-gray/50 py-2 pl-2"
               type="text"
-              placeholder="Full name"
+              placeholder={nameField.placeholder}
               {...register("name")}
             />
             {errors.name?.message && (
@@ -111,13 +133,13 @@ const Contact = () => {
           </div>
           <div className="flex flex-col">
             <label htmlFor="email" className="font-medium mt-6 mb-2">
-              Email
+              {emailField.label}
             </label>
             <input
               id="email"
               className="rounded border border-gray/50 py-2 pl-2"
               type="email"
-              placeholder="Email"
+              placeholder={emailField.placeholder}
               {...register("email")}
             />
             {errors.email?.message && (
@@ -128,13 +150,13 @@ const Contact = () => {
           </div>
           <div className="flex flex-col w-full">
             <label htmlFor="message" className="font-medium mt-6 mb-2">
-              Message
+              {messageField.label}
             </label>
             <textarea
               id="message"
               rows={4}
               className="rounded border border-gray/50 py-2 pl-2"
-              placeholder="Message"
+              placeholder={messageField.placeholder}
               {...register("message")}
             />
             {errors.message?.message && (
@@ -148,14 +170,12 @@ const Contact = () => {
             type="submit"
             value="Send"
           >
-            {loading ? <Loader /> : <div>Send</div>}
+            {loading ? <Loader /> : <div>{sendLabel}</div>}
           </button>
         </SimpleAnimation>
 
         {status === true && (
-          <p className="mt-4 text-primary">
-            Your message was sent successfully
-          </p>
+          <p className="mt-4 text-primary">{sentSuccessfully}</p>
         )}
       </form>
     </Container>

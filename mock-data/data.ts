@@ -169,6 +169,28 @@ const data = {
       link: "https://www.instagram.com/p/CL6tC_gjJXR/",
     },
   },
+  contact: {
+    title: "Contact Me",
+    text: "Do you have any question? Feel free to fill in this form or contact me in ",
+    email: "jordirocasoler94@gmail.com",
+    nameField: {
+      label: "Name",
+      placeholder: "Full name",
+      error: "A name is required",
+    },
+    emailField: {
+      label: "Email",
+      placeholder: "Your email",
+      error: "An email is required",
+    },
+    messageField: {
+      label: "Message",
+      placeholder: "Your message",
+      error: "A message is required",
+    },
+    sentSuccessfully: "Your message was sent successfully",
+    sendLabel: "Send",
+  },
   literals: {
     and: "and",
     mainStack: "Main Stack:",

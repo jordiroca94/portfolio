@@ -36,7 +36,16 @@ export default function Home() {
         items={data.humanRights.items}
         cta={data.humanRights.cta}
       />
-      <Contact />
+      <Contact
+        title={data.contact.title}
+        text={data.contact.text}
+        email={data.contact.email}
+        nameField={data.contact.nameField}
+        emailField={data.contact.emailField}
+        messageField={data.contact.messageField}
+        sentSuccessfully={data.contact.sentSuccessfully}
+        sendLabel={data.contact.sendLabel}
+      />
       <Footer />
     </main>
   );
