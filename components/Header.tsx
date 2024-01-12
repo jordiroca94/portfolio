@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import BurgerButton from "./BurguerButton";
+import BurgerButton from "./BurgerButton";
 import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 
 type Props = {
