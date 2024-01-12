@@ -7,6 +7,7 @@ export type CtaType = {
 
 export type Literals = {
   and: string;
+  mainStack: string;
 };
 
 export type Asset = {

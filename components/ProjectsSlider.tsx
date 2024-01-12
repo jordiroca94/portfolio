@@ -9,7 +9,7 @@ import Button from "./Button";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
-import { Asset, CtaType } from "@/types/common";
+import { Asset, CtaType, Literals } from "@/types/common";
 
 const settings = {
   dots: true,
@@ -54,9 +54,9 @@ type ProjectsType = {
   cta: CtaType;
 };
 
-type Props = { title: string; items: ProjectsType[] };
+type Props = { title: string; items: ProjectsType[]; literals: Literals };
 
-const ProjectsSlider = ({ title, items }: Props) => {
+const ProjectsSlider = ({ title, items, literals }: Props) => {
   const ref = useColor<HTMLDivElement>();
 
   return (
@@ -88,7 +88,9 @@ const ProjectsSlider = ({ title, items }: Props) => {
                   {item.description}
                 </p>
                 <div className="flex items-center gap-2 pb-3">
-                  <h6 className="font-semibold text-lg">Main Stack:</h6>
+                  <h6 className="font-semibold text-lg">
+                    {literals.mainStack}
+                  </h6>
                   <p className="text-lg font-light">{item.stack}</p>
                 </div>
                 <div className="w-fit">

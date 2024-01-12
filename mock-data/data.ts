@@ -7,6 +7,8 @@ import ProjectsImage3 from "../public/assets/klein.jpeg";
 import ProjectsImage4 from "../public/assets/clowid.jpeg";
 import ProjectsImage5 from "../public/assets/primavera.png";
 import ProjectsImage6 from "../public/assets/scopely.webp";
+import HumanRightsImage1 from "../public/assets/armonia.jpeg";
+import HumanRightsImage2 from "../public/assets/stillIRise.png";
 
 const data = {
   header: {
@@ -146,9 +148,30 @@ const data = {
       },
     ],
   },
-
+  humanRights: {
+    title: "Involved with Human Rights",
+    text: [
+      "On 2020 I was working for a year in Greece involved with the refugee crisis in Europe. Few weeks before covid pandemic started I moved to Samos, a small island in Greece 2km far from Turkey, the second island with the biggest refugee camp in Europe.",
+      "With a refugee camp holding over 8.000 asylum seekers I started working as a Restaurant Manager on a free restaurant for vulnerable people called Project Armonia. After 6 months, I started working in Still I Rise, a non formal school as a Logistics Manager.",
+    ],
+    items: [
+      {
+        cta: { label: "Project Armonia", link: "https://projectarmonia.org" },
+        image: { src: HumanRightsImage1, alt: "Project Armonia" },
+      },
+      {
+        cta: { label: "Still I Rise", link: "https://www.stillirisengo.org/" },
+        image: { src: HumanRightsImage2, alt: "Still I Rise NGO" },
+      },
+    ],
+    cta: {
+      label: "Read more about my experience in Still I Rise",
+      link: "https://www.instagram.com/p/CL6tC_gjJXR/",
+    },
+  },
   literals: {
     and: "and",
+    mainStack: "Main Stack:",
   },
 };
 

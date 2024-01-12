@@ -7,8 +7,21 @@ import Image from "next/image";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import TextAnimation from "./animations/TextAnimation";
 import useColor from "@/hooks/useColor";
+import { Asset, CtaType } from "@/types/common";
 
-const HumanRights = () => {
+type HumanRightsType = {
+  cta: CtaType;
+  image: Asset;
+};
+
+type Props = {
+  title: string;
+  text: string[];
+  items: HumanRightsType[];
+  cta: CtaType;
+};
+
+const HumanRights = ({ title, text, items, cta }: Props) => {
   const ref = useColor<HTMLDivElement>();
 
   return (
@@ -16,67 +29,41 @@ const HumanRights = () => {
       <div className="flex flex-col items-center justify-center">
         <TextAnimation className="flex justify-center">
           <h2 className="font-bold text-4xl lg:text-5xl text-white text-center">
-            Involved with Human Rights
+            {title}
           </h2>
         </TextAnimation>
         <div className="lg:w-3/4 text-white py-10 text-base lg:text-lg">
           <TextAnimation>
-            <p className="mb-4 text-justify">
-              On 2020 I was working for a year in Greece involved with the
-              refugee crisis in Europe. Few weeks before covid pandemic started
-              I moved to Samos, a small island in Greece 2km far from Turkey,
-              the second island with the biggest refugee camp in Europe.
-            </p>
-            <p className="text-justify">
-              With a refugee camp holding over 8.000 asylum seekers I started
-              working as a Restaurant Manager on a free restaurant for
-              vulnerable people called Project Armonia. After 6 months, I
-              started working in Still I Rise, a non formal school as a
-              Logistics Manager.
-            </p>
+            <p className="mb-4 text-justify">{text[0]}</p>
+            <p className="text-justify">{text[1]}</p>
           </TextAnimation>
           <div className="flex flex-col md:flex-row gap-10">
-            <div className="flex-1 bg-white mt-10 ease-out duration-300 rounded-lg hover:opacity-80 ">
-              <SimpleAnimation>
-                <a
-                  aria-label="Project Armonia"
-                  href="https://projectarmonia.org/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image
-                    src={Armonia}
-                    className="rounded-lg object-cover w-full h-full "
-                    alt="Armonia Project NGO"
-                  />
-                </a>
-              </SimpleAnimation>
-            </div>
-            <div className="flex-1 mt-10 ease-out duration-300 rounded-lg hover:opacity-80">
-              <SimpleAnimation>
-                <a
-                  aria-label="Still I Rise"
-                  href="https://www.stillirisengo.org/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image
-                    src={SIR}
-                    className="rounded-lg object-cover w-full h-full "
-                    alt="Still I Rise NGO"
-                  />
-                </a>
-              </SimpleAnimation>
-            </div>
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="flex-1 bg-white mt-10 ease-out duration-300 rounded-lg hover:opacity-80 "
+              >
+                <SimpleAnimation>
+                  <a
+                    aria-label={item.cta.label}
+                    href={item.cta.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Image
+                      src={item.image.src}
+                      className="rounded-lg object-cover w-full h-full "
+                      alt={item.image.alt}
+                    />
+                  </a>
+                </SimpleAnimation>
+              </div>
+            ))}
           </div>
           <div className="mt-10">
-            <a
-              href="https://www.instagram.com/p/CL6tC_gjJXR/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={cta.link} target="_blank" rel="noreferrer">
               <h5 className="flex justify-center text-white hover:underline text-center">
-                Read more about my experience in Still I Rise
+                {cta.label}
               </h5>
             </a>
           </div>

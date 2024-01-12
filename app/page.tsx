@@ -25,8 +25,17 @@ export default function Home() {
         literals={data.literals}
       />
       <Experience title={data.experience.title} items={data.experience.items} />
-      <ProjectsSlider title={data.projects.title} items={data.projects.items} />
-      <HumanRights />
+      <ProjectsSlider
+        title={data.projects.title}
+        items={data.projects.items}
+        literals={data.literals}
+      />
+      <HumanRights
+        title={data.humanRights.title}
+        text={data.humanRights.text}
+        items={data.humanRights.items}
+        cta={data.humanRights.cta}
+      />
       <Contact />
       <Footer />
     </main>
