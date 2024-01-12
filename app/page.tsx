@@ -46,7 +46,12 @@ export default function Home() {
         sentSuccessfully={data.contact.sentSuccessfully}
         sendLabel={data.contact.sendLabel}
       />
-      <Footer />
+      <Footer
+        linkedinCta={data.footer.linkedinCta}
+        githubCta={data.footer.githubCta}
+        copyright={data.footer.copyright}
+        createdBy={data.footer.createdBy}
+      />
     </main>
   );
 }

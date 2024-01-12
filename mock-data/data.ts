@@ -191,6 +191,18 @@ const data = {
     sentSuccessfully: "Your message was sent successfully",
     sendLabel: "Send",
   },
+  footer: {
+    linkedinCta: {
+      label: "Linkedin",
+      link: "https://www.linkedin.com/in/jordi-roca-soler/",
+    },
+    githubCta: {
+      label: "GitHub",
+      link: "https://github.com/jordiroca94",
+    },
+    copyright: "Copyright",
+    createdBy: "Jordi Roca",
+  },
   literals: {
     and: "and",
     mainStack: "Main Stack:",
