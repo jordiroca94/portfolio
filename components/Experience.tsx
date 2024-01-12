@@ -6,6 +6,7 @@ import Button from "./Button";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
+import { Asset } from "@/types/common";
 
 type ExperienceType = {
   key: string;
@@ -13,7 +14,7 @@ type ExperienceType = {
   date: string;
   description: string;
   stack: string;
-  logo: any;
+  logo: Asset;
   link: string;
 };
 
@@ -40,8 +41,8 @@ const Experience = ({ title, items }: Props) => {
           >
             <Image
               className="rounded-lg max-h-64 w-full object-cover"
-              src={item.logo}
-              alt={item.company}
+              src={item.logo.src}
+              alt={item.logo.alt}
             />
             <div className="flex flex-col justify-between h-full">
               <div>

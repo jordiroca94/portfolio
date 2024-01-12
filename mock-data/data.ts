@@ -1,6 +1,12 @@
 import HeroImage from "../public/assets/jordi-roca.png";
 import ExperienceImage1 from "../public/assets/clowIdLogo.png";
 import ExperienceImage2 from "../public/assets/dallonsesLogo.jpeg";
+import ProjectsImage1 from "../public/assets/wikiparfum.jpeg";
+import ProjectsImage2 from "../public/assets/hp.jpeg";
+import ProjectsImage3 from "../public/assets/klein.jpeg";
+import ProjectsImage4 from "../public/assets/clowid.jpeg";
+import ProjectsImage5 from "../public/assets/primavera.png";
+import ProjectsImage6 from "../public/assets/scopely.webp";
 
 const data = {
   header: {
@@ -68,7 +74,7 @@ const data = {
         description:
           "Developing the graphical user interface of ClowID web app ( swedish fintech). ",
         stack: "STACK: JavaScript (ES6) | TypeScript | Angular 12 | Tailwind",
-        logo: ExperienceImage1,
+        logo: { src: ExperienceImage1, alt: "ClowID" },
         link: "https://www.clowid.com",
       },
       {
@@ -79,11 +85,68 @@ const data = {
           "Front end developer in diferent projects using AGILE methodology",
         stack:
           "STACK: Javascript(ES6) | TypeScript | React.js  | Next.js | Tailwind",
-        logo: ExperienceImage2,
+        logo: { src: ExperienceImage2, alt: "Dallonses" },
         link: "https://www.dallonses.com",
       },
     ],
   },
+  projects: {
+    title: "Projects",
+    items: [
+      {
+        title: "Wikiparfum ",
+        description: "Digital library to search fragrances",
+        image: { src: ProjectsImage1, alt: "Wikiparfum" },
+        stack: "React.js & Typescript",
+        cta: {
+          label: "Clients website",
+          link: "https://www.wikiparfum.com/en",
+        },
+      },
+      {
+        title: "Hp virtual booth",
+        description: "HP large format printers and plotters",
+        image: { src: ProjectsImage2, alt: "Hp virtual booth" },
+        stack: "React.js & Typescript",
+        cta: {
+          label: "Clients website",
+          link: "https://largeformat.hp.com/uk",
+        },
+      },
+      {
+        title: "Clowid",
+        description: "Digital management receipts and analytics.",
+        image: { src: ProjectsImage3, alt: "Clowid" },
+        stack: "Angular & Typescript",
+        cta: { label: "Clients website", link: "https://www.clowid.com/" },
+      },
+      {
+        title: "Klein",
+        description: "Ecommerce specialized in door's design",
+        image: { src: ProjectsImage4, alt: "Klein" },
+        stack: "React.js & Typescript",
+        cta: { label: "Clients website", link: "https://www.klein.pro/en-uk" },
+      },
+      {
+        title: "Primavera Sound",
+        description: "Music festival",
+        image: { src: ProjectsImage5, alt: "Primavera Sound" },
+        stack: "React.js & Typescript",
+        cta: {
+          label: "Clients website",
+          link: "https://www.primaverasound.com/en/",
+        },
+      },
+      {
+        title: "Scopely",
+        description: "Mobile game development & editing",
+        image: { src: ProjectsImage6, alt: "Scopely" },
+        stack: "React.js & Typescript",
+        cta: { label: "Clients website", link: "https://www.scopely.com/" },
+      },
+    ],
+  },
+
   literals: {
     and: "and",
   },
