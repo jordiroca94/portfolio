@@ -113,7 +113,7 @@ const About = () => {
           <Button
             whiteBg
             openNewTab
-            link="https://drive.google.com/file/d/1iARgV-gOGbpgEJ8macYSdsyMUS6BhbsA/view?usp=sharing"
+            link="https://drive.google.com/file/d/13F_ov_2JtIaj5nJ_Qrm6F3R9s-jfHU2q/view?usp=sharing"
             label="Download CV"
           />
           <Button whiteBg link="#contact" label="Let s talk" />
