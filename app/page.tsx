@@ -14,7 +14,16 @@ export default function Home() {
     <main>
       <Header navLinks={data.header.navlinks} logo={data.header.logo} />
       <Hero text={data.hero.text} image={data.hero.image} />
-      <About />
+      <About
+        title={data.about.title}
+        countUp={data.about.countUp}
+        description={data.about.description}
+        companyCta={data.about.companyCta}
+        humanRightsCta={data.about.humanRightsCta}
+        downloadCta={data.about.downloadCta}
+        contactCta={data.about.contactCta}
+        literals={data.literals}
+      />
       <Experience />
       <ProjectsSlider />
       <HumanRights />
