@@ -2,48 +2,38 @@
 import React from "react";
 import Container from "./Container";
 import Image from "next/image";
-import logoDallonses from "../public/assets/dallonsesLogo.jpeg";
-import logoClowid from "../public/assets/clowIdLogo.png";
 import Button from "./Button";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
 
-const Experience = () => {
+type ExperienceType = {
+  key: string;
+  company: string;
+  date: string;
+  description: string;
+  stack: string;
+  logo: any;
+  link: string;
+};
+
+type Props = {
+  title: string;
+  items: ExperienceType[];
+};
+
+const Experience = ({ title, items }: Props) => {
   const ref = useColor<HTMLDivElement>();
 
-  const jobExperiences = [
-    {
-      key: "1",
-      company: "ClowID",
-      date: "March to June 2022",
-      description:
-        "Developing the graphical user interface of ClowID web app ( swedish fintech). ",
-      stack: "STACK: JavaScript (ES6) | TypeScript | Angular 12 | Tailwind",
-      logo: logoClowid,
-      link: "https://www.clowid.com",
-    },
-    {
-      key: "2",
-      company: "Dallonses",
-      date: "August 2022 - Currently",
-      description:
-        "Front end developer in diferent projects using AGILE methodology",
-      stack:
-        "STACK: Javascript(ES6) | TypeScript | React.js  | Next.js | Tailwind",
-      logo: logoDallonses,
-      link: "https://www.dallonses.com",
-    },
-  ];
   return (
     <Container ref={ref} id="experience" className="bg-matteBlack text-white">
       <TextAnimation>
         <h2 className="flex justify-center font-bold text-4xl lg:text-5xl">
-          Experience
+          {title}
         </h2>
       </TextAnimation>
       <div className="flex flex-col lg:flex-row justify-center gap-20 pt-20">
-        {jobExperiences.map((item) => (
+        {items.map((item) => (
           <SimpleAnimation
             className="flex flex-col border border-white p-6 gap-y-2 rounded-lg lg:w-1/3"
             key={item.key}

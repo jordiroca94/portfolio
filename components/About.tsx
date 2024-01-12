@@ -6,7 +6,7 @@ import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
 import CountUp from "react-countup";
-import { CtaType } from "@/types/common";
+import { CtaType, Literals } from "@/types/common";
 
 type CountUpType = {
   title: string;
@@ -28,7 +28,7 @@ type Props = {
   humanRightsCta: CtaType;
   downloadCta: CtaType;
   contactCta: CtaType;
-  literals: any;
+  literals: Literals;
 };
 const About = ({
   title,

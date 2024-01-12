@@ -24,7 +24,7 @@ export default function Home() {
         contactCta={data.about.contactCta}
         literals={data.literals}
       />
-      <Experience />
+      <Experience title={data.experience.title} items={data.experience.items} />
       <ProjectsSlider />
       <HumanRights />
       <Contact />

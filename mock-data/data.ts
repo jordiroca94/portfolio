@@ -1,4 +1,6 @@
 import HeroImage from "../public/assets/jordi-roca.png";
+import ExperienceImage1 from "../public/assets/clowIdLogo.png";
+import ExperienceImage2 from "../public/assets/dallonsesLogo.jpeg";
 
 const data = {
   header: {
@@ -55,6 +57,32 @@ const data = {
       label: "Let s talk",
       link: "#contact",
     },
+  },
+  experience: {
+    title: "Experience",
+    items: [
+      {
+        key: "1",
+        company: "ClowID",
+        date: "March to June 2022",
+        description:
+          "Developing the graphical user interface of ClowID web app ( swedish fintech). ",
+        stack: "STACK: JavaScript (ES6) | TypeScript | Angular 12 | Tailwind",
+        logo: ExperienceImage1,
+        link: "https://www.clowid.com",
+      },
+      {
+        key: "2",
+        company: "Dallonses",
+        date: "August 2022 - Currently",
+        description:
+          "Front end developer in diferent projects using AGILE methodology",
+        stack:
+          "STACK: Javascript(ES6) | TypeScript | React.js  | Next.js | Tailwind",
+        logo: ExperienceImage2,
+        link: "https://www.dallonses.com",
+      },
+    ],
   },
   literals: {
     and: "and",

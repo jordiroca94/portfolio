@@ -5,10 +5,11 @@ import Container from "./Container";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
 import KeyboardAnimation from "./animations/KeyboardAnimation";
+import { Asset } from "@/types/common";
 
 type Props = {
   text: string | string[];
-  image: any;
+  image: Asset;
 };
 
 const Hero = ({ text, image }: Props) => {
