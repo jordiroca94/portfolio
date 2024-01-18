@@ -1,4 +1,4 @@
-import HeroImage from "../public/assets/jordi-roca.png";
+import HeroImage from "../public/assets/jordi-roca.jpeg";
 import ExperienceImage1 from "../public/assets/clowIdLogo.png";
 import ExperienceImage2 from "../public/assets/dallonsesLogo.jpeg";
 import ProjectsImage1 from "../public/assets/wikiparfum.jpeg";

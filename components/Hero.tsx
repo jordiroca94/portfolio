@@ -26,7 +26,7 @@ const Hero = ({ text, image }: Props) => {
         <div className="sm:w-1/2 lg:w-1/3 py-10">
           <SimpleAnimation>
             <Image
-              className="rounded-full h-full w-full object-cover"
+              className="aspect-square rounded-full h-full w-full object-cover"
               src={image.src}
               alt={image.alt}
             />
