@@ -21,13 +21,19 @@ const Header = ({ navLinks, logo }: Props) => {
       }
     >
       <div className="px-0 lg:px-10 flex justify-between">
-        <a className="font-bold text-2xl uppercase" href="#">
-          {logo}
+        <a href="#">
+          <h1 aria-labelledby={logo} className="font-bold text-2xl uppercase">
+            {logo}
+          </h1>
         </a>
         <div className="lg:flex gap-6 hidden">
           {navLinks.map((link, index) => (
-            <a href={"#" + link.toLowerCase()} key={index}>
-              <h5 className="underlineAfterHover text-lg">{link}</h5>
+            <a
+              className="underlineAfterHover text-lg"
+              href={"#" + link.toLowerCase()}
+              key={index}
+            >
+              {link}
             </a>
           ))}
         </div>

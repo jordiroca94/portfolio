@@ -110,7 +110,12 @@ const Contact = ({
         <TextAnimation className="w-full mb-10">
           <p>
             {text}
-            <u className="text-primary font-semibold no-underline">{email}</u>
+            <a
+              href={`mailto:${email}`}
+              className="text-primary font-semibold no-underline"
+            >
+              {email}
+            </a>
           </p>
         </TextAnimation>
         <SimpleAnimation className="w-full">

@@ -54,6 +54,7 @@ const About = ({
           <div className="flex-1 flex flex-col items-center">
             <SimpleAnimation>
               <a
+                aria-labelledby={countUp.experience.title}
                 href="#experience"
                 className="text-center flex flex-col p-8 hover:bg-primary group hover:text-white  rounded-lg transition-all duration-500 ease-in"
               >
@@ -75,7 +76,7 @@ const About = ({
             </SimpleAnimation>
           </div>
           <SimpleAnimation className="flex-1 flex flex-col items-center">
-            <a href="#projects">
+            <a aria-labelledby={countUp.projects.title} href="#projects">
               <div className="text-center flex flex-col p-8 hover:bg-primary group hover:text-white  rounded-lg transition-all duration-500 ease-in">
                 <h3 className="text-2xl font-semibold group-hover:text-white">
                   {countUp.projects.title}
@@ -101,6 +102,7 @@ const About = ({
             <p>
               {description[0]}
               <a
+                aria-labelledby={companyCta.label}
                 className="text-primary font-semibold hover:font-bold "
                 href={companyCta.link}
               >
