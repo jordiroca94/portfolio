@@ -77,7 +77,10 @@ const data = {
           "Developing the graphical user interface of ClowID web app ( swedish fintech). ",
         stack: "STACK: JavaScript (ES6) | TypeScript | Angular 12 | Tailwind",
         logo: { src: ExperienceImage1, alt: "ClowID" },
-        link: "https://www.clowid.com",
+        cta: {
+          label: "See Website",
+          link: "https://www.clowid.com",
+        },
       },
       {
         key: "2",
@@ -88,7 +91,10 @@ const data = {
         stack:
           "STACK: Javascript(ES6) | TypeScript | React.js  | Next.js | Tailwind",
         logo: { src: ExperienceImage2, alt: "Dallonses" },
-        link: "https://www.dallonses.com",
+        cta: {
+          label: "See Website",
+          link: "https://www.dallonses.com",
+        },
       },
     ],
   },

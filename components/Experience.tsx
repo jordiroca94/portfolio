@@ -6,7 +6,7 @@ import Button from "./Button";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
-import { Asset } from "@/types/common";
+import { Asset, CtaType } from "@/types/common";
 
 type ExperienceType = {
   key: string;
@@ -15,7 +15,7 @@ type ExperienceType = {
   description: string;
   stack: string;
   logo: Asset;
-  link: string;
+  cta: CtaType;
 };
 
 type Props = {
@@ -52,7 +52,11 @@ const Experience = ({ title, items }: Props) => {
                 <h5>{item.stack}</h5>
               </div>
               <div className="w-fit py-4">
-                <Button openNewTab link={item.link} label="See Website" />
+                <Button
+                  openNewTab
+                  link={item.cta.link}
+                  label={item.cta.label}
+                />
               </div>
             </div>
           </SimpleAnimation>
