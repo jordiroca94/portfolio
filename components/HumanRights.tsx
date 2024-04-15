@@ -50,9 +50,10 @@ const HumanRights = ({ title, text, items, cta }: Props) => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={item.image.src}
-                      className="rounded-lg object-cover w-full h-full "
+                      className="rounded-lg aspect-[2/1] object-cover w-full h-full "
                       alt={item.image.alt}
                     />
                   </a>

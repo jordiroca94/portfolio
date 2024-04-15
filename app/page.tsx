@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import HumanRights from "@/components/HumanRights";
 import ProjectsSlider from "@/components/ProjectsSlider";
 import Hero from "@/components/Hero";
-import data from "../mock-data/data";
+import data from "../data/data-en.json";
 
 export default function Home() {
   return (

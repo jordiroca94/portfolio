@@ -39,8 +39,9 @@ const Experience = ({ title, items }: Props) => {
             className="flex flex-col border border-white p-6 gap-y-2 rounded-lg lg:w-1/3"
             key={item.key}
           >
-            <Image
-              className="rounded-lg max-h-64 w-full object-cover"
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="rounded-lg aspect-[3/2] w-full object-cover"
               src={item.logo.src}
               alt={item.logo.alt}
             />

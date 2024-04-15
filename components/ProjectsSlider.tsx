@@ -74,9 +74,10 @@ const ProjectsSlider = ({ title, items, literals }: Props) => {
               className="rounded-lg cursor-pointer bg-lightGray/50"
             >
               <div className="w-full object-cover">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={item.image.src}
-                  className="rounded-lg aspect-[1.762/1] "
+                  className="rounded-lg aspect-[1.762/1] object-cover w-full"
                   alt={item.image.alt}
                 />
               </div>

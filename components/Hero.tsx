@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import Container from "./Container";
 import SimpleAnimation from "./animations/SimpleAnimation";
@@ -25,7 +24,8 @@ const Hero = ({ text, image }: Props) => {
         />
         <div className="sm:w-1/2 lg:w-1/3 py-10">
           <SimpleAnimation>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               className="aspect-square rounded-full h-full w-full object-cover"
               src={image.src}
               alt={image.alt}

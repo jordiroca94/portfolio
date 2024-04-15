@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image";
-
 export type CtaType = {
   label: string;
   link: string;
@@ -12,5 +10,5 @@ export type Literals = {
 
 export type Asset = {
   alt: string;
-  src: StaticImageData;
+  src: string;
 };
