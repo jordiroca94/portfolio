@@ -31,6 +31,7 @@ type Props = {
   messageField: FormFieldType;
   sentSuccessfully: string;
   sendLabel: string;
+  id: string;
 };
 
 const Contact = ({
@@ -42,6 +43,7 @@ const Contact = ({
   messageField,
   sentSuccessfully,
   sendLabel,
+  id,
 }: Props) => {
   const ref = useColor<HTMLDivElement>();
   const form: any = useRef();
@@ -96,7 +98,7 @@ const Contact = ({
   return (
     <Container
       ref={ref}
-      id="contact"
+      id={id}
       className="bg-white flex flex-col items-center"
     >
       <TextAnimation className="flex justify-center">

@@ -21,6 +21,7 @@ export default function Home() {
           <Header navLinks={dataEn.header.navlinks} logo={dataEn.header.logo} />
           <Hero text={dataEn.hero.text} image={dataEn.hero.image} />
           <About
+            id={dataEn.id}
             title={dataEn.about.title}
             countUp={dataEn.about.countUp}
             description={dataEn.about.description}
@@ -31,21 +32,25 @@ export default function Home() {
             literals={dataEn.literals}
           />
           <Experience
+            id={dataEn.id.experience}
             title={dataEn.experience.title}
             items={dataEn.experience.items}
           />
           <ProjectsSlider
+            id={dataEn.id.projects}
             title={dataEn.projects.title}
             items={dataEn.projects.items}
             literals={dataEn.literals}
           />
           <HumanRights
+            id={dataEn.id.humanRights}
             title={dataEn.humanRights.title}
             text={dataEn.humanRights.text}
             items={dataEn.humanRights.items}
             cta={dataEn.humanRights.cta}
           />
           <Contact
+            id={dataEn.id.contact}
             title={dataEn.contact.title}
             text={dataEn.contact.text}
             email={dataEn.contact.email}
@@ -67,6 +72,7 @@ export default function Home() {
           <Header navLinks={dataEs.header.navlinks} logo={dataEs.header.logo} />
           <Hero text={dataEs.hero.text} image={dataEs.hero.image} />
           <About
+            id={dataEs.id}
             title={dataEs.about.title}
             countUp={dataEs.about.countUp}
             description={dataEs.about.description}
@@ -77,21 +83,25 @@ export default function Home() {
             literals={dataEs.literals}
           />
           <Experience
+            id={dataEs.id.experience}
             title={dataEs.experience.title}
             items={dataEs.experience.items}
           />
           <ProjectsSlider
+            id={dataEs.id.projects}
             title={dataEs.projects.title}
             items={dataEs.projects.items}
             literals={dataEs.literals}
           />
           <HumanRights
+            id={dataEs.id.humanRights}
             title={dataEs.humanRights.title}
             text={dataEs.humanRights.text}
             items={dataEs.humanRights.items}
             cta={dataEs.humanRights.cta}
           />
           <Contact
+            id={dataEs.id.contact}
             title={dataEs.contact.title}
             text={dataEs.contact.text}
             email={dataEs.contact.email}

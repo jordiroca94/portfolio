@@ -21,13 +21,14 @@ type ExperienceType = {
 type Props = {
   title: string;
   items: ExperienceType[];
+  id: string;
 };
 
-const Experience = ({ title, items }: Props) => {
+const Experience = ({ title, items, id }: Props) => {
   const ref = useColor<HTMLDivElement>();
 
   return (
-    <Container ref={ref} id="experience" className="bg-matteBlack text-white">
+    <Container ref={ref} id={id} className="bg-matteBlack text-white">
       <TextAnimation>
         <h2 className="flex justify-center font-bold text-4xl lg:text-5xl">
           {title}

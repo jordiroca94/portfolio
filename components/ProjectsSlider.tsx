@@ -54,13 +54,18 @@ type ProjectsType = {
   cta: CtaType;
 };
 
-type Props = { title: string; items: ProjectsType[]; literals: Literals };
+type Props = {
+  title: string;
+  items: ProjectsType[];
+  literals: Literals;
+  id: string;
+};
 
-const ProjectsSlider = ({ title, items, literals }: Props) => {
+const ProjectsSlider = ({ title, items, literals, id }: Props) => {
   const ref = useColor<HTMLDivElement>();
 
   return (
-    <Container ref={ref} id="projects" className="bg-white lg:py-32 py-20">
+    <Container ref={ref} id={id} className="bg-white lg:py-32 py-20">
       <TextAnimation>
         <h2 className="font-bold text-4xl lg:text-5xl text-primary pb-10 flex justify-center">
           {title}

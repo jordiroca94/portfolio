@@ -4,8 +4,12 @@ import BurgerButton from "./BurgerButton";
 import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 import { UseLanguageContext } from "@/context/LanguageContext";
 
+type NavLinkType = {
+  link: string;
+  id: string;
+};
 type Props = {
-  navLinks: string[];
+  navLinks: NavLinkType[];
   logo: string;
 };
 
@@ -32,10 +36,10 @@ const Header = ({ navLinks, logo }: Props) => {
           {navLinks.map((link, index) => (
             <a
               className="underlineAfterHover text-lg"
-              href={"#" + link.toLowerCase()}
+              href={"#" + link.id}
               key={index}
             >
-              {link}
+              {link.link}
             </a>
           ))}
           <div className="flex items-center gap-2 ml-10">
@@ -92,10 +96,10 @@ const Header = ({ navLinks, logo }: Props) => {
                 onClick={() => {
                   setMobileMenu(false), setOpen(!open);
                 }}
-                href={"#" + link.toLowerCase()}
+                href={"#" + link.id}
                 key={index}
               >
-                <h5 className="underlineAfterHover text-lg">{link}</h5>
+                <h5 className="underlineAfterHover text-lg">{link.link}</h5>
               </a>
             ))}
           </div>

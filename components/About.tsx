@@ -29,6 +29,13 @@ type Props = {
   downloadCta: CtaType;
   contactCta: CtaType;
   literals: Literals;
+  id: {
+    about: string;
+    experience: string;
+    projects: string;
+    contact: string;
+    humanRights: string;
+  };
 };
 const About = ({
   title,
@@ -39,11 +46,12 @@ const About = ({
   downloadCta,
   contactCta,
   literals,
+  id,
 }: Props) => {
   const ref = useColor<HTMLDivElement>();
 
   return (
-    <Container className="bg-white" ref={ref} id="about">
+    <Container className="bg-white" ref={ref} id={id.about}>
       <div className="flex flex-col items-center justify-center">
         <TextAnimation className="flex justify-center">
           <h2 className="font-bold text-4xl lg:text-5xl text-primary">
@@ -55,7 +63,7 @@ const About = ({
             <SimpleAnimation>
               <a
                 aria-labelledby={countUp.experience.title}
-                href="#experience"
+                href={`#${id.experience}`}
                 className="text-center flex flex-col p-8 hover:bg-primary group hover:text-white  rounded-lg transition-all duration-500 ease-in"
               >
                 <h3 className="text-2xl group-hover:text-white font-semibold">
@@ -76,7 +84,10 @@ const About = ({
             </SimpleAnimation>
           </div>
           <SimpleAnimation className="flex-1 flex flex-col items-center">
-            <a aria-labelledby={countUp.projects.title} href="#projects">
+            <a
+              aria-labelledby={countUp.projects.title}
+              href={`#${id.projects}`}
+            >
               <div className="text-center flex flex-col p-8 hover:bg-primary group hover:text-white  rounded-lg transition-all duration-500 ease-in">
                 <h3 className="text-2xl font-semibold group-hover:text-white">
                   {countUp.projects.title}

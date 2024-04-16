@@ -1,6 +1,18 @@
 {
+  "id": {
+    "about": "about",
+    "experience": "experience",
+    "projects": "projects",
+    "contact": "contact",
+    "humanRights": "human-rights"
+  },
   "header": {
-    "navlinks": ["About", "Experience", "Projects", "Contact"],
+    "navlinks": [
+      { "link": "About", "id": "about" },
+      { "link": "Experience", "id": "experience" },
+      { "link": "Projects", "id": "projects" },
+      { "link": "Contact", "id": "contact" }
+    ],
     "logo": "Jordi Roca"
   },
   "hero": {
@@ -42,7 +54,7 @@
     },
     "humanRightsCta": {
       "label": "human rights",
-      "link": "#humanRights"
+      "link": "#human-rights"
     },
     "downloadCta": {
       "label": "Download CV",
