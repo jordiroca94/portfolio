@@ -18,7 +18,11 @@ export default function Home() {
     <main>
       {language === "en" ? (
         <>
-          <Header navLinks={dataEn.header.navlinks} logo={dataEn.header.logo} />
+          <Header
+            languages={dataEn.header.languages}
+            navLinks={dataEn.header.navlinks}
+            logo={dataEn.header.logo}
+          />
           <Hero text={dataEn.hero.text} image={dataEn.hero.image} />
           <About
             id={dataEn.id}
@@ -69,7 +73,11 @@ export default function Home() {
         </>
       ) : (
         <>
-          <Header navLinks={dataEs.header.navlinks} logo={dataEs.header.logo} />
+          <Header
+            languages={dataEs.header.languages}
+            navLinks={dataEs.header.navlinks}
+            logo={dataEs.header.logo}
+          />
           <Hero text={dataEs.hero.text} image={dataEs.hero.image} />
           <About
             id={dataEs.id}

@@ -4,6 +4,11 @@ import BurgerButton from "./BurgerButton";
 import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 import { UseLanguageContext } from "@/context/LanguageContext";
 
+type LanguagesType = {
+  en: string;
+  es: string;
+};
+
 type NavLinkType = {
   link: string;
   id: string;
@@ -11,9 +16,10 @@ type NavLinkType = {
 type Props = {
   navLinks: NavLinkType[];
   logo: string;
+  languages: LanguagesType;
 };
 
-const Header = ({ navLinks, logo }: Props) => {
+const Header = ({ navLinks, logo, languages }: Props) => {
   const { language, setLanguage } = UseLanguageContext();
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(false);
@@ -49,7 +55,7 @@ const Header = ({ navLinks, logo }: Props) => {
               }`}
               onClick={() => setLanguage("en")}
             >
-              ENG
+              {languages.en}
             </button>
             <div>/</div>
             <button
@@ -58,7 +64,7 @@ const Header = ({ navLinks, logo }: Props) => {
               }`}
               onClick={() => setLanguage("es")}
             >
-              ESP
+              {languages.es}
             </button>
           </div>
         </div>
@@ -75,7 +81,7 @@ const Header = ({ navLinks, logo }: Props) => {
             <div className="flex items-center gap-2  ">
               <button
                 className={`${
-                  language === "en" && "border-b border-lightGray"
+                  language === "en" ? "font-semibold" : "font-light"
                 }`}
                 onClick={() => setLanguage("en")}
               >
@@ -84,7 +90,7 @@ const Header = ({ navLinks, logo }: Props) => {
               <div>/</div>
               <button
                 className={`${
-                  language === "es" && "border-b border-lightGray"
+                  language === "es" ? "font-semibold" : "font-light"
                 }`}
                 onClick={() => setLanguage("es")}
               >

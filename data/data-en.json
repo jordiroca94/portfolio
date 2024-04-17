@@ -13,7 +13,11 @@
       { "link": "Projects", "id": "projects" },
       { "link": "Contact", "id": "contact" }
     ],
-    "logo": "Jordi Roca"
+    "logo": "Jordi Roca",
+    "languages": {
+      "en": "ENG",
+      "es": "SPA"
+    }
   },
   "hero": {
     "text": ["Hello I'm", "Jordi Roca", "Software Developer"],
