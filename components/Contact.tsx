@@ -46,7 +46,8 @@ const Contact = ({
   id,
 }: Props) => {
   const ref = useColor<HTMLDivElement>();
-  const form: any = useRef();
+  const form = useRef<HTMLFormElement>(null);
+
   const [status, setStatus] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -76,7 +77,7 @@ const Contact = ({
       .sendForm(
         "service_gcjv7fe",
         "template_lm37ztw",
-        form.current,
+        form.current!,
         "0qEytRhXqOf0cpUUe"
       )
       .then(

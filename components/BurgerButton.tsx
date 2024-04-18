@@ -3,7 +3,7 @@ import React, { FC, useState } from "react";
 
 type Props = {
   open: boolean;
-  setOpen: any;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   onClick?: () => void;
   className?: string;
 };

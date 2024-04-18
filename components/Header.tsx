@@ -85,7 +85,7 @@ const Header = ({ navLinks, logo, languages }: Props) => {
                 }`}
                 onClick={() => setLanguage("en")}
               >
-                ENG
+                {languages.en}
               </button>
               <div>/</div>
               <button
@@ -94,7 +94,7 @@ const Header = ({ navLinks, logo, languages }: Props) => {
                 }`}
                 onClick={() => setLanguage("es")}
               >
-                ESP
+                {languages.es}
               </button>
             </div>
             {navLinks.map((link, index) => (
