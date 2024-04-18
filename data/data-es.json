@@ -20,7 +20,7 @@
     }
   },
   "hero": {
-    "text": ["¡Hola! Soy", "Jordi Roca", "Desarroyador de software"],
+    "text": ["¡Hola! Soy", "Jordi Roca", "Software Developer"],
     "image": { "src": "/assets/jordi-roca.jpeg", "alt": "Jordi Roca" }
   },
   "about": {
