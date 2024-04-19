@@ -23,7 +23,12 @@ export default function Home() {
             navLinks={dataEn.header.navlinks}
             logo={dataEn.header.logo}
           />
-          <Hero text={dataEn.hero.text} image={dataEn.hero.image} />
+          <Hero
+            text={dataEn.hero.text}
+            image={dataEn.hero.image}
+            linkedinCta={dataEn.footer.linkedinCta}
+            githubCta={dataEn.footer.githubCta}
+          />
           <About
             id={dataEn.id}
             title={dataEn.about.title}
@@ -78,7 +83,12 @@ export default function Home() {
             navLinks={dataEs.header.navlinks}
             logo={dataEs.header.logo}
           />
-          <Hero text={dataEs.hero.text} image={dataEs.hero.image} />
+          <Hero
+            text={dataEs.hero.text}
+            image={dataEs.hero.image}
+            linkedinCta={dataEs.footer.linkedinCta}
+            githubCta={dataEs.footer.githubCta}
+          />
           <About
             id={dataEs.id}
             title={dataEs.about.title}

@@ -21,7 +21,15 @@
   },
   "hero": {
     "text": ["Hello I'm", "Jordi Roca", "Software Developer"],
-    "image": { "src": "/assets/jordi-roca.jpeg", "alt": "Jordi Roca" }
+    "image": { "src": "/assets/jordi-roca.jpeg", "alt": "Jordi Roca" },
+    "linkedinCta": {
+      "label": "Linkedin",
+      "link": "https://www.linkedin.com/in/jordi-roca-soler/"
+    },
+    "githubCta": {
+      "label": "GitHub",
+      "link": "https://github.com/jordiroca94"
+    }
   },
   "about": {
     "title": "About Me",
