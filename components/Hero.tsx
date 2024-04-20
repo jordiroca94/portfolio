@@ -26,7 +26,7 @@ const Hero = ({ text, image, linkedinCta, githubCta }: Props) => {
           text={text}
           once
         />
-        <div className="sm:w-1/2 lg:w-1/3 py-10 relative group">
+        <div className="sm:w-1/2 lg:w-1/3 my-10 relative group">
           <div className="absolute hidden group-hover:block z-40 top-1/2 left-1/2 transform duration-500 -translate-x-1/2 -translate-y-1/2">
             <div className="flex gap-4">
               <a
@@ -39,7 +39,7 @@ const Hero = ({ text, image, linkedinCta, githubCta }: Props) => {
               </a>
               <a
                 aria-label={githubCta.label}
-                href={linkedinCta.link}
+                href={githubCta.link}
                 target="_blank"
                 className="p-3 border border-white rounded-full"
               >
