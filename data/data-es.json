@@ -88,7 +88,7 @@
         "key": "2",
         "company": "Dallonses",
         "date": "Agosto 2022 - Actualmente",
-        "description": "Desarroyador Front end en diversos proyectos, empleando metodología ágil",
+        "description": "Desarroyador Front end en diversos proyectos, empleando metodología ágil.",
         "stack": "STACK: Javascript(ES6) | TypeScript | React.js  | Next.js | Tailwind",
         "logo": {
           "src": "/assets/dallonsesLogo.jpeg",
@@ -106,7 +106,7 @@
     "items": [
       {
         "title": "Wikiparfum ",
-        "description": "Librería digital para buscar y consultar perfumes",
+        "description": "Librería digital para buscar y consultar perfumes.",
         "image": {
           "src": "/assets/wikiparfum.jpeg",
           "alt": "Wikiparfum"
@@ -119,7 +119,7 @@
       },
       {
         "title": "Hp virtual booth",
-        "description": "Impressoras de gran formato HP",
+        "description": "Impressoras de gran formato HP.",
         "image": {
           "src": "/assets/hp.jpeg",
           "alt": "Hp virtual booth"
@@ -139,7 +139,7 @@
       },
       {
         "title": "Klein",
-        "description": "Tienda en línea especializada en puertas de diseño",
+        "description": "Tienda en línea especializada en puertas de diseño.",
         "image": { "src": "/assets/klein.jpeg", "alt": "Klein" },
         "stack": "React.js & Typescript",
         "cta": {
@@ -149,7 +149,7 @@
       },
       {
         "title": "Primavera Sound",
-        "description": "Festival de música",
+        "description": "Festival de música.",
         "image": {
           "src": "/assets/primavera.png",
           "alt": "Primavera Sound"
@@ -162,7 +162,7 @@
       },
       {
         "title": "Scopely",
-        "description": "Desarrollo de videojuegos y edición",
+        "description": "Desarrollo de videojuegos y edición.",
         "image": { "src": "/assets/scopely.webp", "alt": "Scopely" },
         "stack": "React.js & Typescript",
         "cta": {
@@ -176,7 +176,7 @@
     "title": "Comprometido con los Derechos Humanos",
     "text": [
       "En 2020 estuve trabajando durante un año en Grecia, involucrado en la crisis de refugiados en Europa. Unas semanas antes de que comenzara la pandemia de covid, me trasladé a Samos, una pequeña isla en Grecia, a 2 km de Turquía, la segunda isla con el mayor campo de refugiados en Europa.",
-      "Con un campo de refugiados que albergaba a más de 8.000 solicitantes de asilo, comencé a trabajar como Gerente de Restaurante en un restaurante gratuito para personas vulnerables llamado Proyecto Armonía. Después de 6 meses, comencé a trabajar en Still I Rise, una escuela no formal, como Gerente de Logística."
+      "Con un campo de refugiados que albergaba a más de 8.000 solicitantes de asilo, comencé a trabajar como gerente de restaurante en un restaurante gratuito para personas vulnerables llamado Proyecto Armonía. Después de 6 meses, comencé a trabajar en Still I Rise, una escuela no formal, como gerente de logística."
     ],
     "items": [
       {
@@ -207,7 +207,7 @@
   },
   "contact": {
     "title": "Contacto",
-    "text": "¿Tienes alguna pregunta? Escríbeme a ",
+    "text": "¿Tienes alguna pregunta? Rellena este formulario o escríbeme a ",
     "email": "jordirocasoler94@gmail.com",
     "nameField": {
       "label": "Nombre",
