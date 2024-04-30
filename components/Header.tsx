@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import BurgerButton from "./BurgerButton";
 import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 import { UseLanguageContext } from "@/context/LanguageContext";
+import { motion, AnimatePresence } from "framer-motion";
 
 type LanguagesType = {
   en: string;
@@ -21,9 +22,8 @@ type Props = {
 
 const Header = ({ navLinks, logo, languages }: Props) => {
   const { language, setLanguage } = UseLanguageContext();
-  const [mobileMenu, setMobileMenu] = useState<boolean>(false);
-  const [open, setOpen] = useState<boolean>(false);
-  useLockBodyScroll(mobileMenu);
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  useLockBodyScroll(openModal);
 
   return (
     <nav
@@ -69,13 +69,12 @@ const Header = ({ navLinks, logo, languages }: Props) => {
           </div>
         </div>
         <BurgerButton
-          open={open}
-          setOpen={setOpen}
-          onClick={() => setMobileMenu(!mobileMenu)}
+          openModal={openModal}
+          setOpenModal={setOpenModal}
           className="lg:hidden"
         />
       </div>
-      {mobileMenu && (
+      {openModal && (
         <div className="z-40 flex w-full flex-col overflow-hidden p-6">
           <div className="flex flex-col items-center pt-4 gap-6">
             <div className="flex items-center gap-2  ">
@@ -100,7 +99,7 @@ const Header = ({ navLinks, logo, languages }: Props) => {
             {navLinks.map((link, index) => (
               <a
                 onClick={() => {
-                  setMobileMenu(false), setOpen(!open);
+                  setOpenModal(!openModal);
                 }}
                 href={"#" + link.id}
                 key={index}
