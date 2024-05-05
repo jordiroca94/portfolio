@@ -37,7 +37,7 @@ const Experience = ({ title, items, id }: Props) => {
       <div className="flex flex-col lg:flex-row justify-center gap-20 pt-20">
         {items.map((item) => (
           <SimpleAnimation
-            className="flex flex-col border border-white p-6 gap-y-2 rounded-lg lg:w-1/3"
+            className="flex flex-col border border-white p-6 gap-y-2 rounded-lg lg:w-1/3 shadow-lg shadow-lightGray"
             key={item.key}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -49,6 +49,7 @@ export default function Home() {
             id={dataEn.id.projects}
             title={dataEn.projects.title}
             items={dataEn.projects.items}
+            latestProject={dataEn.projects.latestProject}
             literals={dataEn.literals}
           />
           <HumanRights
@@ -109,6 +110,7 @@ export default function Home() {
             id={dataEs.id.projects}
             title={dataEs.projects.title}
             items={dataEs.projects.items}
+            latestProject={dataEs.projects.latestProject}
             literals={dataEs.literals}
           />
           <HumanRights

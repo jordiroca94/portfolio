@@ -51,7 +51,9 @@ const Header = ({ navLinks, logo, languages }: Props) => {
           <div className="flex items-center gap-2 ml-10">
             <button
               className={`${
-                language === "en" ? "font-semibold" : "font-light"
+                language === "en"
+                  ? "font-semibold"
+                  : "font-light hover:font-medium"
               }`}
               onClick={() => setLanguage("en")}
             >
@@ -60,7 +62,9 @@ const Header = ({ navLinks, logo, languages }: Props) => {
             <div>/</div>
             <button
               className={`${
-                language === "es" ? "font-semibold" : "font-light"
+                language === "es"
+                  ? "font-semibold"
+                  : "font-light hover:font-medium"
               }`}
               onClick={() => setLanguage("es")}
             >

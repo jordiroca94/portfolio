@@ -10,7 +10,7 @@
     "navlinks": [
       { "link": "About", "id": "about" },
       { "link": "Experience", "id": "experience" },
-      { "link": "Projects", "id": "projects" },
+      { "link": "Clients", "id": "projects" },
       { "link": "Contact", "id": "contact" }
     ],
     "logo": "Jordi Roca",
@@ -41,7 +41,7 @@
         "unit": "Years"
       },
       "projects": {
-        "title": "Projects",
+        "title": "Clients",
         "pretitle": "Over",
         "amount": 8,
         "unit": "Clients"
@@ -110,7 +110,7 @@
     ]
   },
   "projects": {
-    "title": "Projects",
+    "title": "Clients",
     "items": [
       {
         "title": "Wikiparfum ",
@@ -178,7 +178,22 @@
           "link": "https://www.scopely.com/"
         }
       }
-    ]
+    ],
+    "latestProject": {
+      "title": "My latest project",
+      "name": "Diverbook",
+      "description": "Diverbook is a Fullstack web app to discover & share diving spots",
+      "image": { "src": "/assets/diverbook-png", "alt": "Diverbook" },
+      "stack": "Next.js, Typescript, Node.js, MongoDB, & Tailwind",
+      "ctaLiveDemo": {
+        "label": "Live demo",
+        "link": "https://diverbook.vercel.app/"
+      },
+      "ctaGithub": {
+        "label": "Github Repository",
+        "link": "https://github.com/jordiroca94/Diverbook"
+      }
+    }
   },
   "humanRights": {
     "title": "Involved with Human Rights",

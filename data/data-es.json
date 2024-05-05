@@ -10,7 +10,7 @@
     "navlinks": [
       { "link": "Quién soy", "id": "quien-soy" },
       { "link": "Experiencia", "id": "experiencia" },
-      { "link": "Proyectos", "id": "proyectos" },
+      { "link": "Clientes", "id": "proyectos" },
       { "link": "Contacto", "id": "contacto" }
     ],
     "logo": "Jordi Roca",
@@ -24,7 +24,7 @@
     "image": { "src": "/assets/jordi-roca.jpeg", "alt": "Jordi Roca" }
   },
   "about": {
-    "title": "Sobre mi",
+    "title": "¿Quién soy?",
     "countUp": {
       "experience": {
         "title": "Experiencia",
@@ -33,7 +33,7 @@
         "unit": "años"
       },
       "projects": {
-        "title": "Proyectos",
+        "title": "Clientes",
         "pretitle": "+",
         "amount": 8,
         "unit": "clientes"
@@ -102,7 +102,7 @@
     ]
   },
   "projects": {
-    "title": "Proyectos",
+    "title": "Clientes",
     "items": [
       {
         "title": "Wikiparfum ",
@@ -170,7 +170,22 @@
           "link": "https://www.scopely.com/"
         }
       }
-    ]
+    ],
+    "latestProject": {
+      "title": "Mi último proyecto",
+      "name": "Diverbook",
+      "description": "Diverbook es una web app Fullstack para  descubrir y compartir para buceadores",
+      "image": { "src": "/assets/diverbook-png", "alt": "Diverbook" },
+      "stack": "Next.js, Typescript, Node.js, MongoDB, & Tailwind",
+      "ctaLiveDemo": {
+        "label": "Demo",
+        "link": "https://diverbook.vercel.app/"
+      },
+      "ctaGithub": {
+        "label": "Repositorio Github",
+        "link": "https://github.com/jordiroca94/Diverbook"
+      }
+    }
   },
   "humanRights": {
     "title": "Comprometido con los Derechos Humanos",
