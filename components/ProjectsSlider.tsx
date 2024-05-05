@@ -135,7 +135,7 @@ const ProjectsSlider = ({
           {latestProject.title}
         </h2>
         <SimpleAnimation
-          className="flex flex-col border border-white p-6 gap-y-2 rounded-lg shadow-lg shadow-black max-w-[500px]"
+          className="flex flex-col border border-white p-6 gap-y-2 rounded-lg shadow-lg shadow-black max-w-[500px] 2xl:max-w-[650px] "
           key="2"
         >
           <div className="w-full object-cover">
