@@ -175,7 +175,7 @@
       "title": "Mi último proyecto",
       "name": "Diverbook",
       "description": "Diverbook es una web app Fullstack para  descubrir y compartir para buceadores",
-      "image": { "src": "/assets/diverbook-png", "alt": "Diverbook" },
+      "image": { "src": "/assets/diverbook.png", "alt": "Diverbook" },
       "stack": "Next.js, Typescript, Node.js, MongoDB, & Tailwind",
       "ctaLiveDemo": {
         "label": "Demo",

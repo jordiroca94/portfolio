@@ -183,7 +183,7 @@
       "title": "My latest project",
       "name": "Diverbook",
       "description": "Diverbook is a Fullstack web app to discover & share diving spots",
-      "image": { "src": "/assets/diverbook-png", "alt": "Diverbook" },
+      "image": { "src": "/assets/diverbook.png", "alt": "Diverbook" },
       "stack": "Next.js, Typescript, Node.js, MongoDB, & Tailwind",
       "ctaLiveDemo": {
         "label": "Live demo",
