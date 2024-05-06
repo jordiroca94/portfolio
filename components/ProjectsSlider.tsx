@@ -63,7 +63,7 @@ export type LatestProjectType = {
   stack: string;
   ctaLiveDemo: CtaType;
   ctaGithub: CtaType;
-  literals: string;
+  literals?: string;
 };
 
 type Props = {
