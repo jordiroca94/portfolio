@@ -54,7 +54,7 @@ const About = ({
     <Container className="bg-white" ref={ref} id={id.about}>
       <div className="flex flex-col items-center justify-center">
         <TextAnimation className="flex justify-center">
-          <h2 className="font-bold text-4xl lg:text-5xl text-primary">
+          <h2 className="font-bold text-4xl lg:text-5xl text-primary pb-2">
             {title}
           </h2>
         </TextAnimation>
@@ -114,7 +114,7 @@ const About = ({
               {description[0]}
               <a
                 aria-labelledby={companyCta.label}
-                className="text-primary font-semibold hover:font-bold "
+                className="text-primary font-semibold hover:border-b-2 hover:border-primary"
                 href={companyCta.link}
               >
                 {companyCta.label}
@@ -148,7 +148,7 @@ const About = ({
               {description[10]}
 
               <a
-                className="text-primary font-semibold hover:font-bold "
+                className="text-primary font-semibold hover:border-b-2 hover:border-primary"
                 href={humanRightsCta.link}
               >
                 {humanRightsCta.label}

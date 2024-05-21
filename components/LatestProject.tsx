@@ -30,7 +30,7 @@ const LatestProject = ({
             alt={image.alt}
           />
         </div>
-        <div className="px-4">
+        <div className="px-4 mt-2">
           <h3 className="text-2xl font-light text-black uppercase mb-2">
             {name}
           </h3>
