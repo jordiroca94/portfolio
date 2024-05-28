@@ -1,6 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./fonts.css";
+
+
+@layer base {
+    body {
+        @apply font-primary relative text-black;
+      }
+}
 
 img {
   pointer-events: none;

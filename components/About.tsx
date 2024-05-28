@@ -109,7 +109,7 @@ const About = ({
           </SimpleAnimation>
         </div>
         <SimpleAnimation className="flex justify-center">
-          <div className="flex flex-col font-light items-center text-center lg:w-3/5 py-4 text-base lg:text-lg text-gray">
+          <div className="flex flex-col items-center text-center lg:w-3/5 py-4 text-base lg:text-lg text-gray">
             <p>
               {description[0]}
               <a

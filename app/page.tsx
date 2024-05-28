@@ -1,5 +1,5 @@
 "use client";
-import "./globals.css";
+import "../styles/globals.css";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
