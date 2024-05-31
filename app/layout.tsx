@@ -1,13 +1,17 @@
 import "../styles/globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import { LanguageWrapper } from "../context/LanguageContext";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSans = Noto_Sans({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Jordi Roca",
-  description: "Jordi Roca",
+  description:
+    "This is the portfolio of Jordi Roca. Find about him, experiences, clients, projects & more.",
 };
 
 export default function RootLayout({
@@ -18,7 +22,7 @@ export default function RootLayout({
   return (
     <LanguageWrapper>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={notoSans.className}>{children}</body>
       </html>
     </LanguageWrapper>
   );
