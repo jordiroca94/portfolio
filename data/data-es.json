@@ -227,17 +227,17 @@
     "nameField": {
       "label": "Nombre",
       "placeholder": "Nombre completo",
-      "error": "Por favor, completa este campo"
+      "error": "Completa este campo"
     },
     "emailField": {
       "label": "Email",
       "placeholder": "Su email",
-      "error": "Por favor, completa este campo"
+      "error": "Completa este campo"
     },
     "messageField": {
       "label": "Mensaje",
       "placeholder": "Su mensaje",
-      "error": "Por favor, completa este campo"
+      "error": "Completa este campo"
     },
     "sentSuccessfully": "Su mensaje ha sido enviado",
     "sendLabel": "Enviar"
