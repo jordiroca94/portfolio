@@ -53,6 +53,8 @@ const Hero = ({ text, image, linkedinCta, githubCta }: Props) => {
               className="aspect-square rounded-full h-full w-full object-cover"
               src={image.src}
               alt={image.alt}
+              title={image.alt}
+
             />
           </SimpleAnimation>
         </div>

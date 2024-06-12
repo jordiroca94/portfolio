@@ -28,6 +28,7 @@ const LatestProject = ({
             src={image.src}
             className="rounded-lg aspect-[1.762/1] object-cover w-full bg-black"
             alt={image.alt}
+            title={image.alt}
           />
         </div>
         <div className="px-4 mt-2">

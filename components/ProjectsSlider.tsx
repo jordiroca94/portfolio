@@ -102,6 +102,7 @@ const ProjectsSlider = ({
                   src={item.image.src}
                   className="rounded-t-lg aspect-[1.762/1] object-cover w-full"
                   alt={item.image.alt}
+                  title={item.image.alt}
                 />
               </div>
               <div className="p-4">
@@ -112,9 +113,9 @@ const ProjectsSlider = ({
                   {item.description}
                 </p>
                 <div className="flex items-center gap-2 pb-3">
-                  <h6 className="font-semibold text-lg">
+                  <h4 className="font-semibold text-lg">
                     {literals.mainStack}
-                  </h6>
+                  </h4>
                   <p className="text-lg font-light">{item.stack}</p>
                 </div>
                 <div className="w-full lg:w-fit">

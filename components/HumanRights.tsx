@@ -56,6 +56,7 @@ const HumanRights = ({ title, text, items, cta, id }: Props) => {
                       src={item.image.src}
                       className="rounded-lg aspect-[2/1] object-cover w-full h-full "
                       alt={item.image.alt}
+                      title={item.image.alt}
                     />
                   </a>
                 </SimpleAnimation>
@@ -64,9 +65,9 @@ const HumanRights = ({ title, text, items, cta, id }: Props) => {
           </div>
           <div className="mt-10">
             <a href={cta.link} target="_blank" rel="noreferrer">
-              <h5 className="flex justify-center text-white hover:underline text-center">
+              <h3 className="flex justify-center text-white hover:underline text-center">
                 {cta.label}
-              </h5>
+              </h3>
             </a>
           </div>
         </div>

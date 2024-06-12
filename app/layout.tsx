@@ -9,9 +9,9 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Jordi Roca",
+  title: "Jordi Roca - Portfolio",
   description:
-    "This is the portfolio of Jordi Roca. Find about him, experiences, clients, projects & more.",
+    " Passionate software developer experienced in building graphical user interfaces with JavaScript, TypeScript, and its frameworks and libraries (React.js and Angular).",
 };
 
 export default function RootLayout({

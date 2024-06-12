@@ -45,6 +45,7 @@ const Experience = ({ title, items, id }: Props) => {
               className="rounded-lg aspect-[3/2] w-full object-cover"
               src={item.logo.src}
               alt={item.logo.alt}
+              title={item.logo.alt}
             />
             <div className="flex flex-col justify-between h-full">
               <div>
