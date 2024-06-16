@@ -19,14 +19,14 @@ const Footer = ({ linkedinCta, githubCta, copyright, createdBy }: Props) => {
       <footer className="text-white flex items-center flex-col gap-4">
         <SimpleAnimation className="flex gap-8">
           <a
-            aria-label={linkedinCta.label}
+            aria-labelledby={linkedinCta.label}
             href={linkedinCta.link}
             target="_blank"
           >
             <BsLinkedin className="h-8 w-8 hover:animate-bounce" />
           </a>
           <a
-            aria-label={githubCta.label}
+            aria-labelledby={githubCta.label}
             href={linkedinCta.link}
             target="_blank"
           >
