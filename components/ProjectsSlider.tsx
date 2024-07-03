@@ -67,8 +67,8 @@ export type LatestProjectType = {
 };
 
 type Props = {
-  title: string;
-  items: ProjectsType[];
+  title?: string;
+  items?: ProjectsType[];
   latestProject: LatestProjectType;
   literals: Literals;
   id: string;
@@ -89,7 +89,7 @@ const ProjectsSlider = ({
           {title}
         </h2>
       </TextAnimation>
-      <SimpleAnimation>
+      {/* <SimpleAnimation>
         <Slider className="sliderGaps pb-6 " {...settings}>
           {items.map((item, index) => (
             <div
@@ -97,7 +97,6 @@ const ProjectsSlider = ({
               className="rounded-lg cursor-pointer bg-lightGray/50 "
             >
               <div className="w-full object-cover">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={item.image.src}
                   className="rounded-t-lg aspect-[1.762/1] object-cover w-full"
@@ -131,7 +130,7 @@ const ProjectsSlider = ({
             </div>
           ))}
         </Slider>
-      </SimpleAnimation>
+      </SimpleAnimation> */}
       <LatestProject
         title={latestProject.title}
         name={latestProject.name}
