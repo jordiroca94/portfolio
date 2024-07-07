@@ -84,11 +84,11 @@ const ProjectsSlider = ({
   const ref = useColor<HTMLDivElement>();
   return (
     <Container ref={ref} id={id} className="bg-white lg:py-32 py-20">
-      <TextAnimation>
+      {/* <TextAnimation>
         <h2 className="font-bold text-4xl lg:text-5xl text-primary pb-10 flex justify-center">
           {title}
         </h2>
-      </TextAnimation>
+      </TextAnimation> */}
       {/* <SimpleAnimation>
         <Slider className="sliderGaps pb-6 " {...settings}>
           {items.map((item, index) => (

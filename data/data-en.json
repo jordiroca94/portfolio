@@ -10,7 +10,6 @@
     "navlinks": [
       { "link": "About", "id": "about" },
       { "link": "Experience", "id": "experience" },
-      { "link": "Clients", "id": "projects" },
       { "link": "Contact", "id": "contact" }
     ],
     "logo": "Jordi Roca",

@@ -10,7 +10,6 @@
     "navlinks": [
       { "link": "Quién soy", "id": "quien-soy" },
       { "link": "Experiencia", "id": "experiencia" },
-      { "link": "Clientes", "id": "proyectos" },
       { "link": "Contacto", "id": "contacto" }
     ],
     "logo": "Jordi Roca",

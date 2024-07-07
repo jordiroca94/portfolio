@@ -14,7 +14,7 @@ const LatestProject = ({
   literals,
 }: LatestProjectType) => {
   return (
-    <div className="flex flex-col items-center pt-10 lg:pt-20">
+    <div className="flex flex-col items-center">
       <h2 className="font-bold text-4xl lg:text-5xl text-primary mt-8 lg:mt-0 pb-10 flex justify-center">
         {title}
       </h2>
