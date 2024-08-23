@@ -15,11 +15,11 @@ const LatestProject = ({
 }: LatestProjectType) => {
   return (
     <div className="flex flex-col items-center">
-      <h2 className="font-bold text-4xl lg:text-5xl text-primary mt-8 lg:mt-0 pb-10 flex justify-center">
+      <h2 className="font-bold text-4xl lg:text-5xl text-primary lg:mt-0 pb-10 flex justify-center">
         {title}
       </h2>
       <SimpleAnimation
-        className="flex flex-col border border-white p-6 gap-y-2 rounded-lg shadow-lg shadow-black max-w-[500px] 2xl:max-w-[650px] "
+        className="flex flex-col border border-white p-4 lg:p-6 gap-y-2 rounded-lg shadow-lg shadow-matteBlack max-w-[500px] 2xl:max-w-[650px] "
         key="2"
       >
         <div className="w-full object-cover">
@@ -31,7 +31,7 @@ const LatestProject = ({
             title={image.alt}
           />
         </div>
-        <div className="px-4 mt-2">
+        <div className="mt-2">
           <h3 className="text-2xl font-light text-black uppercase mb-2">
             {name}
           </h3>

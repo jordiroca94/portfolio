@@ -83,7 +83,7 @@ const ProjectsSlider = ({
 }: Props) => {
   const ref = useColor<HTMLDivElement>();
   return (
-    <Container ref={ref} id={id} className="bg-white lg:py-32 py-20">
+    <Container ref={ref} id={id} className="bg-white">
       {/* <TextAnimation>
         <h2 className="font-bold text-4xl lg:text-5xl text-primary pb-10 flex justify-center">
           {title}
