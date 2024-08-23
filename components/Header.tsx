@@ -24,9 +24,25 @@ const Header = ({ navLinks, logo, languages }: Props) => {
   const { language, setLanguage } = UseLanguageContext();
   const [openModal, setOpenModal] = useState<boolean>(false);
   useLockBodyScroll(openModal);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setOpenModal(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav
+      ref={ref}
       id="header"
       className={
         "fixed top-0 z-50 w-full p-6 visible translate-y-0 transition duration-500 ease-in-out"
