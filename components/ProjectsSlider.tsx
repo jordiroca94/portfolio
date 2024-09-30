@@ -10,7 +10,6 @@ import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
 import { Asset, CtaType, Literals } from "@/types/common";
-import LatestProject from "./LatestProject";
 
 const settings = {
   dots: true,
@@ -48,15 +47,6 @@ const settings = {
 };
 
 type ProjectsType = {
-  title: string;
-  description: string;
-  image: Asset;
-  stack: string;
-  cta: CtaType;
-};
-
-export type LatestProjectType = {
-  title: string;
   name: string;
   description: string;
   image: Asset;
@@ -67,80 +57,76 @@ export type LatestProjectType = {
 };
 
 type Props = {
-  title?: string;
-  items?: ProjectsType[];
-  latestProject: LatestProjectType;
+  title: string;
+  items: ProjectsType[];
   literals: Literals;
   id: string;
 };
 
-const ProjectsSlider = ({
-  title,
-  items,
-  latestProject,
-  literals,
-  id,
-}: Props) => {
+const ProjectsSlider = ({ title, items, literals, id }: Props) => {
   const ref = useColor<HTMLDivElement>();
+
   return (
     <Container ref={ref} id={id} className="bg-white">
-      {/* <TextAnimation>
+      <TextAnimation>
         <h2 className="font-bold text-4xl lg:text-5xl text-primary pb-10 flex justify-center">
           {title}
         </h2>
-      </TextAnimation> */}
-      {/* <SimpleAnimation>
-        <Slider className="sliderGaps pb-6 " {...settings}>
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className="rounded-lg cursor-pointer bg-lightGray/50 "
+      </TextAnimation>
+      <Slider className="sliderGaps pb-6 " {...settings}>
+        {items.map((item) => (
+          <div
+            key={item.name}
+            className="flex flex-col items-center py-3 sm:p-3"
+          >
+            <SimpleAnimation
+              className="flex flex-col border border-white p-4 lg:p-6 gap-y-2 rounded-lg shadow-lg shadow-matteBlack"
+              key="2"
             >
               <div className="w-full object-cover">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={item.image.src}
-                  className="rounded-t-lg aspect-[1.762/1] object-cover w-full"
+                  className="rounded-lg aspect-[1.762/1] object-cover w-full bg-black"
                   alt={item.image.alt}
                   title={item.image.alt}
                 />
               </div>
-              <div className="p-4">
-                <h3 className="text-2xl font-light text-black uppercase mb-4">
-                  {item.title}
+              <div className="mt-2">
+                <h3 className="text-3xl font-semibold text-black mb-2">
+                  {item.name}
                 </h3>
-                <p className="text-lg font-light pt-2 pb-3">
-                  {item.description}
-                </p>
+                <p className="text-lg font-light pb-3">{item.description}</p>
                 <div className="flex items-center gap-2 pb-3">
-                  <h4 className="font-semibold text-lg">
-                    {literals.mainStack}
-                  </h4>
-                  <p className="text-lg font-light">{item.stack}</p>
+                  <p className="text-lg font-light">
+                    <strong>{literals.mainStack}</strong> {item.stack}
+                  </p>
                 </div>
-                <div className="w-full lg:w-fit">
-                  <Button
-                    className="px-3 py-1 text-center"
-                    whiteBg
-                    openNewTab
-                    link={item.cta.link}
-                    label={item.cta.label}
-                  />
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-4 pt-2">
+                  <div className="w-full lg:w-fit">
+                    <Button
+                      className="px-3 py-1 text-center"
+                      whiteBg
+                      openNewTab
+                      link={item.ctaGithub?.link}
+                      label={item.ctaGithub?.label}
+                    />
+                  </div>
+                  <div className="w-full lg:w-fit">
+                    <Button
+                      className="px-3 py-1 text-center"
+                      whiteBg
+                      openNewTab
+                      link={item.ctaLiveDemo?.link}
+                      label={item.ctaLiveDemo?.label}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-      </SimpleAnimation> */}
-      <LatestProject
-        title={latestProject.title}
-        name={latestProject.name}
-        description={latestProject.description}
-        image={latestProject.image}
-        stack={latestProject.stack}
-        ctaLiveDemo={latestProject.ctaLiveDemo}
-        ctaGithub={latestProject.ctaGithub}
-        literals={literals.mainStack}
-      />
+            </SimpleAnimation>
+          </div>
+        ))}
+      </Slider>
     </Container>
   );
 };

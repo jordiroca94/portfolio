@@ -47,9 +47,8 @@ export default function Home() {
           />
           <ProjectsSlider
             id={dataEn.id.projects}
-            // title={dataEn.projects.title}
-            // items={dataEn.projects.items}
-            latestProject={dataEn.projects.latestProject}
+            title={dataEn.projects.title}
+            items={dataEn.projects.items}
             literals={dataEn.literals}
           />
           <HumanRights
@@ -108,9 +107,8 @@ export default function Home() {
           />
           <ProjectsSlider
             id={dataEs.id.projects}
-            // title={dataEs.projects.title}
-            // items={dataEs.projects.items}
-            latestProject={dataEs.projects.latestProject}
+            title={dataEs.projects.title}
+            items={dataEs.projects.items}
             literals={dataEs.literals}
           />
           <HumanRights

@@ -86,7 +86,7 @@
       {
         "key": "2",
         "company": "Dallonses",
-        "date": "Agosto 2022 - Actualmente",
+        "date": "Agosto 2022 - Setiembre 2024",
         "description": "Desarroyador Front end en diversos proyectos, empleando metodología ágil.",
         "stack": "STACK: Javascript(ES6) | TypeScript | React.js  | Next.js | Tailwind",
         "logo": {
@@ -101,21 +101,37 @@
     ]
   },
   "projects": {
-    "latestProject": {
-      "title": "Mi último proyecto",
-      "name": "Diverbook",
-      "description": "Diverbook es una web app Fullstack para  descubrir y compartir para buceadores",
-      "image": { "src": "/assets/diverbook.png", "alt": "Diverbook" },
-      "stack": "Next.js, Typescript, Node.js, MongoDB, & Tailwind",
-      "ctaLiveDemo": {
-        "label": "Demo",
-        "link": "https://diverbook.vercel.app/"
+    "title": "Projects",
+    "items": [
+      {
+        "name": "Diverbook",
+        "description": "Diverbook es una web app Fullstack para  descubrir y compartir para buceadores",
+        "image": { "src": "/assets/diverbook.png", "alt": "Diverbook" },
+        "stack": "Next.js, Typescript, Node.js, MongoDB, & Tailwind",
+        "ctaLiveDemo": {
+          "label": "Demo",
+          "link": "https://diverbook.vercel.app/"
+        },
+        "ctaGithub": {
+          "label": "Repositorio Github",
+          "link": "https://github.com/jordiroca94/Diverbook"
+        }
       },
-      "ctaGithub": {
-        "label": "Repositorio Github",
-        "link": "https://github.com/jordiroca94/Diverbook"
+      {
+        "name": "Moviechase",
+        "description": "Moviechase es una web app Front end para buscar peliculas, series, celebridades.",
+        "image": { "src": "/assets/moviechase.png", "alt": "Moviechase" },
+        "stack": "Next.js, Typescript, Tailwind & TMDB API",
+        "ctaLiveDemo": {
+          "label": "Demo",
+          "link": "https://moviechase.vercel.app/"
+        },
+        "ctaGithub": {
+          "label": "Repositorio Github",
+          "link": "https://github.com/jordiroca94/moviechase"
+        }
       }
-    }
+    ]
   },
   "humanRights": {
     "title": "Comprometido con los Derechos Humanos",

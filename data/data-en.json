@@ -94,7 +94,7 @@
       {
         "key": "2",
         "company": "Dallonses",
-        "date": "August 2022 - Currently",
+        "date": "August 2022 - September 2024",
         "description": "Front end developer in diferent projects using AGILE methodology.",
         "stack": "STACK: Javascript(ES6) | TypeScript | React.js  | Next.js | Tailwind",
         "logo": {
@@ -109,21 +109,37 @@
     ]
   },
   "projects": {
-    "latestProject": {
-      "title": "My latest project",
-      "name": "Diverbook",
-      "description": "Diverbook is a Fullstack web app to discover & share diving spots",
-      "image": { "src": "/assets/diverbook.png", "alt": "Diverbook" },
-      "stack": "Next.js, Typescript, Node.js, MongoDB, & Tailwind",
-      "ctaLiveDemo": {
-        "label": "Live demo",
-        "link": "https://diverbook.vercel.app/"
+    "title": "Projects",
+    "items": [
+      {
+        "name": "Diverbook",
+        "description": "Diverbook is a Fullstack web app to discover and share the best places for diving.",
+        "image": { "src": "/assets/diverbook.png", "alt": "Diverbook" },
+        "stack": "Next.js, Typescript, Node.js, MongoDB, & Tailwind",
+        "ctaLiveDemo": {
+          "label": "Demo",
+          "link": "https://diverbook.vercel.app/"
+        },
+        "ctaGithub": {
+          "label": "Github repository",
+          "link": "https://github.com/jordiroca94/Diverbook"
+        }
       },
-      "ctaGithub": {
-        "label": "Github Repository",
-        "link": "https://github.com/jordiroca94/Diverbook"
+      {
+        "name": "Moviechase",
+        "description": "Moviechase is a Front end encyclopedia to discover movies, TV shows, celebrities, and more.",
+        "image": { "src": "/assets/moviechase.png", "alt": "Moviechase" },
+        "stack": "Next.js, Typescript, Tailwind & TMDB API",
+        "ctaLiveDemo": {
+          "label": "Demo",
+          "link": "https://moviechase.vercel.app/"
+        },
+        "ctaGithub": {
+          "label": "Github repository",
+          "link": "https://github.com/jordiroca94/moviechase"
+        }
       }
-    }
+    ]
   },
   "humanRights": {
     "title": "Involved with Human Rights",
