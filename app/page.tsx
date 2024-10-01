@@ -6,7 +6,7 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HumanRights from "@/components/HumanRights";
-import ProjectsSlider from "@/components/ProjectsSlider";
+import Projects from "@/components/Projects";
 import Hero from "@/components/Hero";
 import dataEn from "../data/data-en.json";
 import dataEs from "../data/data-es.json";
@@ -45,7 +45,7 @@ export default function Home() {
             title={dataEn.experience.title}
             items={dataEn.experience.items}
           />
-          <ProjectsSlider
+          <Projects
             id={dataEn.id.projects}
             title={dataEn.projects.title}
             items={dataEn.projects.items}
@@ -105,7 +105,7 @@ export default function Home() {
             title={dataEs.experience.title}
             items={dataEs.experience.items}
           />
-          <ProjectsSlider
+          <Projects
             id={dataEs.id.projects}
             title={dataEs.projects.title}
             items={dataEs.projects.items}

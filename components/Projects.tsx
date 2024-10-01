@@ -11,7 +11,6 @@ import useColor from "@/hooks/useColor";
 import { Asset, CtaType, Literals } from "@/types/common";
 import { sliderSettings } from "@/utils/slider";
 
-
 type ProjectsType = {
   name: string;
   description: string;
@@ -29,7 +28,7 @@ type Props = {
   id: string;
 };
 
-const ProjectsSlider = ({ title, items, literals, id }: Props) => {
+const Projects = ({ title, items, literals, id }: Props) => {
   const ref = useColor<HTMLDivElement>();
 
   return (
@@ -39,7 +38,7 @@ const ProjectsSlider = ({ title, items, literals, id }: Props) => {
           {title}
         </h2>
       </TextAnimation>
-      <Slider className="sliderGaps pb-6 " {...sliderSettings}>
+      <Slider className="sliderGaps" {...sliderSettings}>
         {items.map((item) => (
           <div
             key={item.name}
@@ -97,4 +96,4 @@ const ProjectsSlider = ({ title, items, literals, id }: Props) => {
   );
 };
 
-export default ProjectsSlider;
+export default Projects;

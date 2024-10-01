@@ -27,7 +27,7 @@ const Hero = ({ text, image, linkedinCta, githubCta }: Props) => {
           once
         />
         <div className="sm:w-1/2 lg:w-1/3 my-10 relative group">
-          <div className="absolute hidden group-hover:block z-40 top-1/2 left-1/2 transform duration-500 -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute hidden lg:group-hover:block z-40 top-1/2 left-1/2 transform duration-500 -translate-x-1/2 -translate-y-1/2">
             <div className="flex gap-4">
               <a
                 aria-label={linkedinCta.label}
@@ -47,7 +47,7 @@ const Hero = ({ text, image, linkedinCta, githubCta }: Props) => {
               </a>
             </div>
           </div>
-          <SimpleAnimation className="group-hover:blur-sm transform duration-500">
+          <SimpleAnimation className="lg:group-hover:blur-sm transform duration-500">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className="aspect-square rounded-full h-full w-full object-cover"

@@ -1,12 +1,15 @@
 "use client";
 import React from "react";
 import Container from "./Container";
-import Image from "next/image";
 import Button from "./Button";
 import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
 import { Asset, CtaType } from "@/types/common";
+import Slider from "react-slick";
+import { sliderSettings } from "@/utils/slider";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 type ExperienceType = {
   key: string;
@@ -34,7 +37,7 @@ const Experience = ({ title, items, id }: Props) => {
           {title}
         </h2>
       </TextAnimation>
-      <div className="flex flex-col lg:flex-row justify-center gap-20 pt-20">
+      <Slider className="sliderGaps py-10 custom-slick-dots" {...sliderSettings}>
         {items.map((item) => (
           <SimpleAnimation
             className="flex flex-col border border-white p-6 gap-y-2 rounded-lg lg:w-1/3 shadow-lg shadow-lightGray"
@@ -61,10 +64,10 @@ const Experience = ({ title, items, id }: Props) => {
                   label={item.cta.label}
                 />
               </div>
-            </div>
+            </div> 
           </SimpleAnimation>
         ))}
-      </div>
+      </Slider>
     </Container>
   );
 };
