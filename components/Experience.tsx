@@ -29,7 +29,6 @@ type Props = {
 
 const Experience = ({ title, items, id }: Props) => {
   const ref = useColor<HTMLDivElement>();
-
   return (
     <Container ref={ref} id={id} className="bg-matteBlack text-white">
       <TextAnimation>
