@@ -36,7 +36,7 @@ const Experience = ({ title, items, id }: Props) => {
           {title}
         </h2>
       </TextAnimation>
-      <Slider className="sliderGaps py-10 custom-slick-dots" {...sliderSettings}>
+      <Slider className="sliderGaps sliderWhiteDots py-10 custom-slick-dots" {...sliderSettings}>
         {items.map((item) => (
           <SimpleAnimation
             className="flex flex-col border border-white p-6 gap-y-2 rounded-lg lg:w-1/3 shadow-lg shadow-lightGray"

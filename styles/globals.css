@@ -11,6 +11,14 @@
       }
 }
 
+.sliderWhiteDots .slick-dots li button:before{
+color:white !important
+}
+
+.sliderWhiteDots.slick-dots li.slick-active button:before {
+  color:white !important
+}
+
 img {
   pointer-events: none;
 }
