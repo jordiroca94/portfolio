@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Container from "./Container";
-import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,41 +9,8 @@ import TextAnimation from "./animations/TextAnimation";
 import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
 import { Asset, CtaType, Literals } from "@/types/common";
+import { sliderSettings } from "@/utils/slider";
 
-const settings = {
-  dots: true,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  initialSlide: 0,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
 
 type ProjectsType = {
   name: string;
@@ -73,7 +39,7 @@ const ProjectsSlider = ({ title, items, literals, id }: Props) => {
           {title}
         </h2>
       </TextAnimation>
-      <Slider className="sliderGaps pb-6 " {...settings}>
+      <Slider className="sliderGaps pb-6 " {...sliderSettings}>
         {items.map((item) => (
           <div
             key={item.name}

@@ -23,14 +23,14 @@ const Footer = ({ linkedinCta, githubCta, copyright, createdBy }: Props) => {
             href={linkedinCta.link}
             target="_blank"
           >
-            <BsLinkedin className="h-8 w-8 hover:animate-bounce" />
+            <BsLinkedin className="h-8 w-8 scale-100 transition duration-300 ease-in-out sm:hover:scale-125" />
           </a>
           <a
             aria-labelledby={githubCta.label}
             href={linkedinCta.link}
             target="_blank"
           >
-            <FaGithub className="h-8 w-8 hover:animate-bounce" />
+            <FaGithub className="h-8 w-8 scale-100 transition duration-300 ease-in-out sm:hover:scale-125" />
           </a>
         </SimpleAnimation>
         <SimpleAnimation>
