@@ -52,7 +52,7 @@ const Projects = ({ title, items, literals, id }: Props) => {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={item.image.src}
-                  className="rounded-lg aspect-[1.762/1] object-cover w-full bg-black"
+                  className="rounded-lg aspect-[1.5/1] object-cover w-full bg-black"
                   alt={item.image.alt}
                   title={item.image.alt}
                 />
@@ -61,13 +61,13 @@ const Projects = ({ title, items, literals, id }: Props) => {
                 <h3 className="text-3xl font-semibold text-black mb-2">
                   {item.name}
                 </h3>
-                <p className="text-lg font-light pb-3">{item.description}</p>
+                <p className="font-light pb-3">{item.description}</p>
                 <div className="flex items-center gap-2 pb-3">
-                  <p className="text-lg font-light">
+                  <p className="font-light">
                     <strong>{literals.mainStack}</strong> {item.stack}
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row sm:justify-between gap-4 pt-2">
+                <div className="flex flex-col lg:flex-row lg:justify-between gap-4 pt-2">
                   <div className="w-full lg:w-fit">
                     <Button
                       className="px-3 py-1 text-center"

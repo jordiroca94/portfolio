@@ -10,6 +10,8 @@
     "navlinks": [
       { "link": "About", "id": "about" },
       { "link": "Experience", "id": "experience" },
+      { "link": "Projects", "id": "projects" },
+
       { "link": "Contact", "id": "contact" }
     ],
     "logo": "Jordi Roca",
@@ -31,7 +33,7 @@
     }
   },
   "about": {
-    "title": "About Me",
+    "title": "About me",
     "countUp": {
       "experience": {
         "title": "Experience",

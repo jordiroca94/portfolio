@@ -19,7 +19,7 @@ const Hero = ({ text, image, linkedinCta, githubCta }: Props) => {
   const ref = useColor<HTMLDivElement>();
 
   return (
-    <Container ref={ref} className="lg:h-screen bg-matteBlack text-white">
+    <Container ref={ref} className="bg-matteBlack text-white">
       <div className="flex flex-col lg:flex-row justify-center lg:justify-around items-center pt-20 lg:pt-32">
         <KeyboardAnimation
           className="text-3xl lg:text-6xl text-center lg:text-left"

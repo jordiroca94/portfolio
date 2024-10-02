@@ -106,7 +106,7 @@ const Contact = ({
         <h2 className="font-bold text-5xl text-primary mb-20">{title}</h2>
       </TextAnimation>
       <form
-        className="flex flex-col items-start lg:w-2/5 text-lg"
+        className="flex flex-col items-start lg:w-2/5 text-base"
         ref={form}
         onSubmit={handleSubmit(sendEmail)}
       >
@@ -174,7 +174,7 @@ const Contact = ({
             )}
           </div>
           <button
-            className="w-full md:w-auto mt-10 border-gray/50 hover:bg-primary hover:text-white hover:border-none py-2 px-10 rounded-lg text-lg border cursor-pointer transition-all duration-400 ease-in"
+            className="w-full md:w-auto mt-10 border-gray/50 hover:bg-primary hover:text-white hover:border-none py-2 px-10 rounded-lg border cursor-pointer transition-all duration-400 ease-in"
             type="submit"
             value="Send"
           >

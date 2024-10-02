@@ -39,12 +39,12 @@ const Experience = ({ title, items, id }: Props) => {
       <Slider className="sliderGaps sliderWhiteDots py-10 custom-slick-dots" {...sliderSettings}>
         {items.map((item) => (
           <SimpleAnimation
-            className="flex flex-col border border-white p-6 gap-y-2 rounded-lg lg:w-1/3 shadow-lg shadow-lightGray"
+            className="flex flex-row h-full border border-white p-6 gap-y-2 rounded-lg shadow-lg shadow-lightGray mb-4"
             key={item.key}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              className="rounded-lg aspect-[3/2] w-full object-cover"
+              className="rounded-lg aspect-[1.5/1] w-full object-cover"
               src={item.logo.src}
               alt={item.logo.alt}
               title={item.logo.alt}
@@ -52,11 +52,11 @@ const Experience = ({ title, items, id }: Props) => {
             <div className="flex flex-col justify-between h-full">
               <div>
                 <h3 className="text-3xl font-semibold py-2">{item.company}</h3>
-                <p className="text-lg font-light mb-2">{item.date}</p>
+                <p className="font-light mb-2">{item.date}</p>
                 <h4 className="mb-2">{item.description}</h4>
                 <h5>{item.stack}</h5>
               </div>
-              <div className="w-fit py-4">
+              <div className="w-fit pt-4">
                 <Button
                   openNewTab
                   link={item.cta.link}

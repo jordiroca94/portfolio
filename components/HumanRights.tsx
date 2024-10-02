@@ -33,7 +33,7 @@ const HumanRights = ({ title, text, items, cta, id }: Props) => {
             {title}
           </h2>
         </TextAnimation>
-        <div className="lg:w-3/4 text-white py-10 text-base lg:text-lg">
+        <div className="lg:w-3/4 text-white py-10 text-base">
           <TextAnimation>
             <p className="mb-4 text-justify">{text[0]}</p>
             <p className="text-justify">{text[1]}</p>

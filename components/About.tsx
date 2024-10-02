@@ -69,7 +69,7 @@ const About = ({
                 <h3 className="text-2xl group-hover:text-white font-semibold">
                   {countUp.experience.title}
                 </h3>
-                <div className="flex gap-2 text-lg text-primary group-hover:text-white pt-2">
+                <div className="flex gap-2 text-primary group-hover:text-white pt-2">
                   <span>{countUp.experience.pretitle}</span>
                   <CountUp
                     delay={2}
@@ -92,10 +92,9 @@ const About = ({
                 <h3 className="text-2xl font-semibold group-hover:text-white">
                   {countUp.projects.title}
                 </h3>
-                <div className="flex gap-2 text-lg text-primary group-hover:text-white pt-2">
+                <div className="flex gap-2 text-primary group-hover:text-white pt-2">
                   <span>{countUp.projects.pretitle}</span>
                   <CountUp
-                    className="text-lg"
                     delay={2}
                     enableScrollSpy
                     duration={5}
@@ -109,7 +108,7 @@ const About = ({
           </SimpleAnimation>
         </div>
         <SimpleAnimation className="flex justify-center">
-          <div className="flex flex-col items-center text-center lg:w-3/5 py-4 text-base lg:text-lg text-gray">
+          <div className="flex flex-col items-center text-center lg:w-3/5 py-4 text-base text-gray">
             <p>
               {description[0]}
               <a
