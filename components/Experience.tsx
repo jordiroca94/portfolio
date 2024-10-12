@@ -53,7 +53,7 @@ const Experience = ({ title, items, id }: Props) => {
               title={item.logo.alt}
             />
             <div className="flex flex-col justify-between h-full">
-              <div className="h-48">
+              <div className="h-52 lg:h-48">
                 <h3 className="text-3xl font-semibold py-2">{item.company}</h3>
                 <p className="font-light mb-2">{item.date}</p>
                 <h4 className="mb-2">{item.description}</h4>
