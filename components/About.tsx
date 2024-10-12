@@ -7,11 +7,12 @@ import SimpleAnimation from "./animations/SimpleAnimation";
 import useColor from "@/hooks/useColor";
 import CountUp from "react-countup";
 import { CtaType, Literals } from "@/types/common";
+import { yearsPassedSince } from "@/utils/yearsPassedSince";
 
 type CountUpType = {
   title: string;
   pretitle: string;
-  amount: number;
+  amount?: number;
   unit: string;
 };
 
@@ -69,14 +70,14 @@ const About = ({
                 <h3 className="text-2xl group-hover:text-white font-semibold">
                   {countUp.experience.title}
                 </h3>
-                <div className="flex gap-2 text-primary group-hover:text-white pt-2">
+                <div className="flex justify-center gap-2 text-primary group-hover:text-white pt-2">
                   <span>{countUp.experience.pretitle}</span>
                   <CountUp
                     delay={2}
                     enableScrollSpy
                     duration={5}
                     start={0}
-                    end={countUp.experience.amount}
+                    end={Number(yearsPassedSince("2021-10-01"))}
                   />
                   <p>{countUp.experience.unit}</p>
                 </div>
@@ -99,7 +100,7 @@ const About = ({
                     enableScrollSpy
                     duration={5}
                     start={0}
-                    end={countUp.projects.amount}
+                    end={countUp.projects.amount!}
                   />
                   <p>{countUp.projects.unit}</p>
                 </div>
@@ -110,7 +111,7 @@ const About = ({
         <SimpleAnimation className="flex justify-center">
           <div className="flex flex-col items-center text-center lg:w-3/5 py-4 text-base text-gray">
             <p>
-              {description[0]}
+              {description[0]} {yearsPassedSince("2021-10-01")} {description[1]}
               <a
                 aria-labelledby={companyCta.label}
                 className="text-primary font-semibold hover:border-b-2 hover:border-primary"
@@ -118,7 +119,6 @@ const About = ({
               >
                 {companyCta.label}
               </a>
-              {description[1]}
             </p>
             <br />
             <p>{description[2]}</p>
@@ -145,7 +145,6 @@ const About = ({
             <br />
             <p>
               {description[10]}
-
               <a
                 className="text-primary font-semibold hover:border-b-2 hover:border-primary"
                 href={humanRightsCta.link}

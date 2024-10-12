@@ -8,8 +8,8 @@ import useColor from "@/hooks/useColor";
 import { Asset, CtaType } from "@/types/common";
 import Slider from "react-slick";
 import { sliderSettings } from "@/utils/slider";
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 type ExperienceType = {
   key: string;
@@ -36,7 +36,10 @@ const Experience = ({ title, items, id }: Props) => {
           {title}
         </h2>
       </TextAnimation>
-      <Slider className="sliderGaps sliderWhiteDots py-10 custom-slick-dots" {...sliderSettings}>
+      <Slider
+        className="sliderGaps sliderWhiteDots py-10 custom-slick-dots"
+        {...sliderSettings}
+      >
         {items.map((item) => (
           <SimpleAnimation
             className="flex flex-row h-full border border-white p-6 gap-y-2 rounded-lg shadow-lg shadow-lightGray mb-4"
@@ -50,7 +53,7 @@ const Experience = ({ title, items, id }: Props) => {
               title={item.logo.alt}
             />
             <div className="flex flex-col justify-between h-full">
-              <div>
+              <div className="h-48">
                 <h3 className="text-3xl font-semibold py-2">{item.company}</h3>
                 <p className="font-light mb-2">{item.date}</p>
                 <h4 className="mb-2">{item.description}</h4>
@@ -63,7 +66,7 @@ const Experience = ({ title, items, id }: Props) => {
                   label={item.cta.label}
                 />
               </div>
-            </div> 
+            </div>
           </SimpleAnimation>
         ))}
       </Slider>

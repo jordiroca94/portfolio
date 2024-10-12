@@ -20,7 +20,7 @@
     }
   },
   "hero": {
-    "text": ["¡Hola! Soy", "Jordi Roca", "Software Developer"],
+    "text": ["¡Hola! Soy", "Jordi Roca", "Software Engineer"],
     "image": { "src": "/assets/jordi-roca.jpeg", "alt": "Jordi Roca" }
   },
   "about": {
@@ -29,7 +29,6 @@
       "experience": {
         "title": "Experiencia",
         "pretitle": "+",
-        "amount": 2,
         "unit": "años"
       },
       "projects": {
@@ -40,8 +39,8 @@
       }
     },
     "description": [
-      "Soy un desarrollador web con más de dos años de experiencia. Actualmente estoy trabajando en ",
-      " como desarrollador Front end.",
+      "Soy un desarrollador de software con más",
+      "años de experiencia. Actualmente estoy trabajando en ",
       "Me considero una persona con habilidades creativas y sociales. Valoro el trabajo en equipo y la posibilidad de innovar y ser creativo.",
       "Como desarrollador Front end, tengo experiencia programando con ",
       "Javascript ",
@@ -53,7 +52,7 @@
       "Además de mi experiencia como programador, soy un aficionado a la escalada y buceo de vez en cuando. También tengo un gran interés en los  "
     ],
     "companyCta": {
-      "label": "Dallonses",
+      "label": "Açai Travel",
       "link": "#experiencia"
     },
     "humanRightsCta": {

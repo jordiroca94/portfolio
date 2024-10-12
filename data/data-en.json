@@ -21,7 +21,7 @@
     }
   },
   "hero": {
-    "text": ["Hello I'm", "Jordi Roca", "Software Developer"],
+    "text": ["Hello I'm", "Jordi Roca", "Software Engineer"],
     "image": { "src": "/assets/jordi-roca.jpeg", "alt": "Jordi Roca" },
     "linkedinCta": {
       "label": "Linkedin",
@@ -38,8 +38,7 @@
       "experience": {
         "title": "Experience",
         "pretitle": "+",
-        "amount": 2,
-        "unit": "Years"
+        "unit": "years"
       },
       "projects": {
         "title": "Clients",
@@ -49,8 +48,8 @@
       }
     },
     "description": [
-      "I'm a software developer with over 2 years of experience. Currently working in  ",
-      " as a front end developer.",
+      "I'm a software engineer with over",
+      "years of experience. Currently working in ",
       "I have social and creative skills as well as a wide perspective to see the picture. I value teamwork and the chance to innovate and be creative.",
       "As a front end developer I have strong skills in ",
       "Javascript ",
@@ -62,7 +61,7 @@
       "Besides my tech skills, I'm a bouldering fanatic and I like to dive from time to time. I'm very concerned about "
     ],
     "companyCta": {
-      "label": "Dallonses",
+      "label": "Açai Travel",
       "link": "#experience"
     },
     "humanRightsCta": {

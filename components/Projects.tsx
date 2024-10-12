@@ -58,14 +58,16 @@ const Projects = ({ title, items, literals, id }: Props) => {
                 />
               </div>
               <div className="mt-2">
-                <h3 className="text-3xl font-semibold text-black mb-2">
-                  {item.name}
-                </h3>
-                <p className="font-light pb-3">{item.description}</p>
-                <div className="flex items-center gap-2 pb-3">
-                  <p className="font-light">
-                    <strong>{literals.mainStack}</strong> {item.stack}
-                  </p>
+                <div className="h-48 2xl:h-40">
+                  <h3 className="text-3xl font-semibold text-black mb-2">
+                    {item.name}
+                  </h3>
+                  <p className="font-light pb-3">{item.description}</p>
+                  <div className="flex items-center gap-2 pb-3">
+                    <p className="font-light">
+                      <strong>{literals.mainStack}</strong> {item.stack}
+                    </p>
+                  </div>
                 </div>
                 <div className="flex flex-col lg:flex-row lg:justify-between gap-4 pt-2">
                   <div className="w-full lg:w-fit">
