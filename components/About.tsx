@@ -77,7 +77,7 @@ const About = ({
                     enableScrollSpy
                     duration={5}
                     start={0}
-                    end={Number(yearsPassedSince("2021-10-01"))}
+                    end={Number(yearsPassedSince("2022-03-01"))}
                   />
                   <p>{countUp.experience.unit}</p>
                 </div>
@@ -111,7 +111,7 @@ const About = ({
         <SimpleAnimation className="flex justify-center">
           <div className="flex flex-col items-center text-center lg:w-3/5 py-4 text-base text-gray">
             <p>
-              {description[0]} {yearsPassedSince("2021-10-01")} {description[1]}
+              {description[0]} {yearsPassedSince("2022-03-01")} {description[1]}
               <a
                 aria-labelledby={companyCta.label}
                 className="text-primary font-semibold hover:border-b-2 hover:border-primary"

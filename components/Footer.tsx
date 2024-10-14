@@ -27,7 +27,7 @@ const Footer = ({ linkedinCta, githubCta, copyright, createdBy }: Props) => {
           </a>
           <a
             aria-labelledby={githubCta.label}
-            href={linkedinCta.link}
+            href={githubCta.link}
             target="_blank"
           >
             <FaGithub className="h-8 w-8 scale-100 transition duration-300 ease-in-out sm:hover:scale-125" />
