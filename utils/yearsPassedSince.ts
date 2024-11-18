@@ -8,6 +8,5 @@ export const yearsPassedSince = (dateString: string) => {
 
   const millisecondsInAYear: number = 1000 * 60 * 60 * 24 * 365.25;
   const yearsPassed: number = differenceInMilliseconds / millisecondsInAYear;
-
-  return yearsPassed.toFixed(0);
+  return Math.trunc(yearsPassed);
 };
